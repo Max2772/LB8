@@ -5,34 +5,32 @@
 using namespace std;
 
 int main(){
-    cout << "Программа, для перевода числа из обратного кода в естественную форму для целых чисел\n";
-    cout << "Выполнил Бибиков Максим, группа 453502\n";
+    cout << "Введите миниальную зарплату в рублях 2024 год: ";
+    double minIncome = readDoubleInLine();
+    while ((minIncome <= 0)) {
+        if(minIncome != -INF)
+            cout << "Некорректный ввод! Введите натуральное число: ";
+
+        minIncome = readDoubleInLine();
+    }
+
+    
     while(true){
-        cout << "Введите 1, если хотите выполнить программу, или 2, если хотите завершить работу программы\n";
-        int type = readIntegerInLine();
-        while ((type != 1 && type != 2)) {
-            cout << "Некорректный ввод! Введите либо 1, либо 2: ";
-            type = readIntegerInLine();
+        printMenu();
+        int choice = readIntegerInLine();
+        while(choice < 0 || choice > 6){
+            if(choice != -INF)
+                cout << "Некорректный ввод! Введите опцию из списка!\n";
+            choice = readIntegerInLine();
         }
-        if(type == 2)
-            break;
-        else if(type != 1 && type != 2)
-            continue;
-
-
-        
-        
-        cout << "Введите обратный код: ";
-        string input = readStringForReverse();
-        while(input == INFSTRING)
-            input = readStringForReverse();
-        
-        if(input[0] == '1')
-            reverseBitsInString(input);
-
-        int result = binaryStringToDecimal(input);
-        cout << "Полученное число: " << result << '\n';
-
+        switch(choice){
+            case 0:
+                return 0;
+            case 1:
+                Student* dataBase = inputStudents();
+                break;
+            
+        }
     }
     return 0;
 }

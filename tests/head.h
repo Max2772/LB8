@@ -2,13 +2,17 @@
 
 using std::string;
 
+typedef struct{
+    string FIO;
+    int group;
+    double averageMark;
+    double familyIncome;
+} Student;
+
+
 constexpr const int INF = 2000000000;
-inline const std::string INFSTRING = "2000000000";
 int readIntegerInLine();
-string readStringForReverse();
-void reverseBitsInString(string &input);
-int pow(int a, int b);
-int binaryStringToDecimal(string input);
+double readDoubleInLine();
 
 
 
