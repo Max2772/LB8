@@ -15,13 +15,10 @@ int main(){
     }
 
     Student* dataBase = nullptr;
-    int dataBaseSize = 0;  
-
-    cout << "Нажмите ENTER, чтобы продолжить..";
+    int dataBaseSize = 0; 
 
     while(true){
-        cin.ignore();
-        cin.get();
+        waitForInput();
         printMenu();
         int choice = readIntegerInLine();
         while(choice < 0 || choice > 6){
@@ -39,12 +36,7 @@ int main(){
                 return 0;
 
             case 1:
-                if(dataBase != nullptr){
-                    delete [] dataBase;
-                    dataBase = nullptr;
-                    dataBaseSize = 0;
-                }
-                dataBase = inputStudents(dataBaseSize);
+                dataBase = inputStudents(dataBase, dataBaseSize);
                 break;
 
             case 2:

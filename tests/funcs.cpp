@@ -42,10 +42,12 @@ void printMenu(){
 
 
 void showList(Student *dataBase, int size){
+    cout << '\n';
     for(int i = 0; i < size; ++i){
         cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
         " , доход на члена семьи " << dataBase[i].familyIncome << '\n';
     }
+    cout << '\n';
 }
 
 void swapStruct(Student &a, Student &b){
@@ -66,44 +68,41 @@ void sortByMinIncome(Student *a, int size){
     }
 }
 
-void addElement(Student *a, int size, Student x){
-    Student *b = new Student[size + 1];
-    for(int i = 0; i < size; ++i){
-        b[i] = a[i];
+Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
+    Student *b = new Student[dataBaseSize + 1];
+    for(int i = 0; i < dataBaseSize; ++i){
+        b[i] = dataBase[i];
     }
-    b[size] = x;
-    delete [] a;
-    a = b;
+
+    delete [] dataBase;
+
+    b[dataBaseSize] = x;
+    dataBaseSize++;
+    return b;
 }
 
-int readCharToStringForChoice(char* input){  
-    bool invalidInput = false;
-    bool tooLongInput = true;
-    for(int i = 0; i < 80; ++i){
-        input[i] = getchar();
-        if(input[i] != 'y' && input[i] != 'Y' && input[i] != 'n' && input[i] != 'N' && input[i] != '\n'){
-            invalidInput = true;
-        }
-        if(input[i] == '\n'){
-            tooLongInput = false;
-            break;
-        }
-    }
-
-    if(tooLongInput){
-        while((getchar()) != '\n');
-        return -INF;
-    }
-
-    if(invalidInput || (input[1] != '\n')){
-        return -INF;
-    }else if(input[0] == '\n')
-        return -INF;
-
-    return 1;
+void waitForInput() {
+    cout << "Нажмите ENTER, чтобы продолжить...";
+    cin.ignore();
+    cin.get();
 }
 
-Student* inputStudents(int &dataBaseSize){
+Student* inputStudents(Student *dataBase, int &dataBaseSize){
+    if(dataBaseSize != 0){
+        cout << "Вы уверены, что хотите перезаписать старый список?(y/n): ";
+        string buffer; cin >> buffer;
+        while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+            cout << "Введите только Y/y - да, N/n -нет: ";
+            cin >> buffer;
+        }
+        if(buffer == "N" || buffer == "n")
+            return dataBase;
+        else{
+               delete [] dataBase;
+               dataBase = nullptr;
+               dataBaseSize = 0;
+        }
+    }
     cout << "\nВыберите способ ввода данных:\n";
     cout << "1. Ввод заранее заданного количества структур\n";
     cout << "2. Ввод до появления структуры с заданным признаком\n";
@@ -157,15 +156,19 @@ Student* inputStudents(int &dataBaseSize){
     }else if(choice == 2){
 
     }else{
-        int size = 1;
-        Student *dataBase = new Student[size];
+        dataBaseSize = 0;
+        Student *dataBase = nullptr;
         while(true){
             cout << "Хотите ли вы добавить студента?(Y/N)";
-            char* buffer = new char[80];
-            while(readCharToStringForChoice(buffer) == -INF);
+            string buffer; cin >> buffer;
+            while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+                cout << "Введите только Y/y - да, N/n -нет: ";
+                cin >> buffer;
+            }
                 if(buffer[0] == 'Y' || buffer[0] == 'y'){
                     Student B;
                     cout << "Введите ФИО"  << " студента: ";
+                    cin.ignore();
                     getline(cin, B.FIO);
                     cout << "Введите номер группы студента: ";
                     B.group = readIntegerInLine();
@@ -188,8 +191,11 @@ Student* inputStudents(int &dataBaseSize){
                             cout << "Некорректный ввод! Введите вещественное число > 0: ";
                         B.familyIncome = readDoubleInLine();
                     }
-                    size++;
-                    addElement(dataBase, size, B);
+                    dataBase = addElement(dataBase, dataBaseSize, B);
+                }else if(dataBaseSize == 0){
+                    delete [] dataBase;
+                    dataBase = nullptr;
+                    return dataBase;
                 }else{
                     return dataBase;
                 }
@@ -197,14 +203,3 @@ Student* inputStudents(int &dataBaseSize){
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
