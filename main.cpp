@@ -55,6 +55,9 @@ int main(){
             case 5:
                 sortByMinIncome(dataBase, dataBaseSize);
                 break;
+            case 6:
+                outputLessThanTwoIncome(dataBase, dataBaseSize, minIncome);
+                break;
             
         }
     }

@@ -126,6 +126,22 @@ void printMenu(){
         cout << "Ввод: ";
 }
 
+void outputLessThanTwoIncome(Student *dataBase, int size, const int &minIncome){
+    cout << "\nСтуденты с доходом на члена семьи меньше 2 минимальных зарплат(" << 2 * minIncome << " рублей):\n";
+    bool found = false;
+    for(int i = 0; i < size; ++i){
+        if(dataBase[i].familyIncome < 2 * minIncome){
+            cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
+            " , доход на члена семьи " << dataBase[i].familyIncome << '\n';
+            found = true;
+        }
+    }
+    if(!found)
+        cout << "Таковых студентов нет!\n";
+    cout << '\n';
+}
+
+
 Student* editList(Student *dataBase, int &dataBaseSize){
     cout << "Введите + для добавления, - для удаления студента(+/-): ";
     string buffer; cin >> buffer;
