@@ -203,15 +203,24 @@ void swapStruct(Student &a, Student &b){
     b = temp;
 }  
 
-void sortByMinIncome(Student *a, int size){
-    for(int i = 0; i < size; ++i){
-        int min = i;
-        for(int j = i + 1; j < size; ++j){
-            if(a[j].familyIncome < a[min].familyIncome)
-                min = j;
+
+void sortByMinIncome(Student *a, const int &dataBasesize){
+    cout << "Вы уверены, что хотите отсортировать список по возврастанию по параметру «Доход на члена семьи» ?(y/n): ";
+        string buffer; cin >> buffer;
+        while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+            cout << "Введите только Y/y - да, N/n -нет: ";
+            cin >> buffer;
         }
-        if(min != i)
-            swapStruct(a[i], a[min]);
+    if(buffer == "Y" || buffer == "y"){
+        for(int i = 0; i < dataBasesize; ++i){
+            int min = i;
+            for(int j = i + 1; j < dataBasesize; ++j){
+                if(a[j].familyIncome < a[min].familyIncome)
+                    min = j;
+            }
+            if(min != i)
+                swapStruct(a[i], a[min]);
+        }
     }
 }
 

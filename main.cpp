@@ -52,6 +52,9 @@ int main(){
             case 4:
                 dataBase = editList(dataBase, dataBaseSize);
                 break;
+            case 5:
+                sortByMinIncome(dataBase, dataBaseSize);
+                break;
             
         }
     }
