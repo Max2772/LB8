@@ -14,8 +14,14 @@ int main(){
         minIncome = readDoubleInLine();
     }
 
-    
+    Student* dataBase = nullptr;
+    int dataBaseSize = 0;  
+
+    cout << "Нажмите ENTER, чтобы продолжить..";
+
     while(true){
+        cin.ignore();
+        cin.get();
         printMenu();
         int choice = readIntegerInLine();
         while(choice < 0 || choice > 6){
@@ -25,9 +31,28 @@ int main(){
         }
         switch(choice){
             case 0:
+                if(dataBase != nullptr){
+                    delete [] dataBase;
+                    dataBase = nullptr;
+                    dataBaseSize = 0;
+                }
                 return 0;
+
             case 1:
-                Student* dataBase = inputStudents();
+                if(dataBase != nullptr){
+                    delete [] dataBase;
+                    dataBase = nullptr;
+                    dataBaseSize = 0;
+                }
+                dataBase = inputStudents(dataBaseSize);
+                break;
+
+            case 2:
+                if(dataBase == nullptr || dataBaseSize == 0){
+                    cout << "Список студентов пуст! Добавьте сначала студентов.\n";
+                }else{
+                    showList(dataBase, dataBaseSize);
+                    }
                 break;
             
         }

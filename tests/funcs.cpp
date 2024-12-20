@@ -12,7 +12,6 @@ int readIntegerInLine() {
         cout << "Некорректный ввод! Введите заново: ";
         return -INF;
     }
-
     return number;
 }
 
@@ -25,13 +24,13 @@ double readDoubleInLine() {
         cout << "Некорректный ввод! Введите заново: ";
         return -INF;
     }
-
+    
     return number;
 }
 
 void printMenu(){
         cout << "\n\t\t\tМеню Задание 1\n";
-        cout << "1 - Добавление списка студентов\n"; 
+        cout << "1 - Создание списка студентов\n"; 
         cout << "2 - Просмотр списка\n";
         cout << "3 - Поиск студентапо ФИО\n"; 
         cout << "4 - Редактирование списка\n"; 
@@ -39,6 +38,14 @@ void printMenu(){
         cout << "6 - Вывести студентов, доход на члена семьи которых < 2 минимальных зарплат\n"; 
         cout << "0 - Выход из Задания 1\n"; 
         cout << "Ввод: ";
+}
+
+
+void showList(Student *dataBase, int size){
+    for(int i = 0; i < size; ++i){
+        cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
+        " , доход на члена семьи " << dataBase[i].familyIncome << '\n';
+    }
 }
 
 void swapStruct(Student &a, Student &b){
@@ -96,7 +103,7 @@ int readCharToStringForChoice(char* input){
     return 1;
 }
 
-Student* inputStudents(){
+Student* inputStudents(int &dataBaseSize){
     cout << "\nВыберите способ ввода данных:\n";
     cout << "1. Ввод заранее заданного количества структур\n";
     cout << "2. Ввод до появления структуры с заданным признаком\n";
@@ -116,12 +123,12 @@ Student* inputStudents(){
                 cout << "Некорректный ввод! Введите натуральное число: ";
             N = readIntegerInLine();
         }
-        cin.ignore();
 
         Student *dataBase = new Student[N];
 
         for(int i = 0; i < N; ++i){
             cout << "Введите ФИО " << i+1 << " студента: ";
+            cin.ignore();
             getline(cin, dataBase[i].FIO);
             cout << "Введите номер группы " << i+1 << " студента: ";
             dataBase[i].group = readIntegerInLine();
@@ -138,17 +145,19 @@ Student* inputStudents(){
                 dataBase[i].averageMark = readDoubleInLine();
             }
             cout << "Введите доход на члена семьи " << i+1 << " студента: ";
+            dataBase[i].familyIncome = readDoubleInLine();
             while(dataBase[i].familyIncome < 0){
                 if(dataBase[i].familyIncome != -INF)
                     cout << "Некорректный ввод! Введите вещественное число > 0: ";
                 dataBase[i].familyIncome = readDoubleInLine();
             }
         }
+        dataBaseSize = N;
         return dataBase;
     }else if(choice == 2){
 
     }else{
-        int size = 0;
+        int size = 1;
         Student *dataBase = new Student[size];
         while(true){
             cout << "Хотите ли вы добавить студента?(Y/N)";
@@ -159,12 +168,27 @@ Student* inputStudents(){
                     cout << "Введите ФИО"  << " студента: ";
                     getline(cin, B.FIO);
                     cout << "Введите номер группы студента: ";
-                    cin >> B.group;
+                    B.group = readIntegerInLine();
+                    while(B.group < 0){
+                        if(B.group != -INF)
+                            cout << "Некорректный ввод! Введите натуральное число: ";
+                        B.group = readIntegerInLine();
+                    }
                     cout << "Введите средний балл студента: ";
-                    cin >> B.averageMark;
+                    B.averageMark = readDoubleInLine();
+                    while(B.averageMark < 0){
+                        if(B.averageMark != -INF)
+                            cout << "Некорректный ввод! Введите вещественное число > 0: ";
+                        B.averageMark = readDoubleInLine();
+                    }
                     cout << "Введите доход на члена семьи студента: ";
-                    cin >> B.familyIncome;
-                    cin.ignore(); size++;
+                    B.familyIncome = readDoubleInLine();
+                    while(B.familyIncome < 0){
+                        if(B.familyIncome != -INF)
+                            cout << "Некорректный ввод! Введите вещественное число > 0: ";
+                        B.familyIncome = readDoubleInLine();
+                    }
+                    size++;
                     addElement(dataBase, size, B);
                 }else{
                     return dataBase;
