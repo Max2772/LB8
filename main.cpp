@@ -46,6 +46,12 @@ int main(){
                     showList(dataBase, dataBaseSize);
                     }
                 break;
+            case 3:
+                findInList(dataBase, dataBaseSize);
+                break;
+            case 4:
+                dataBase = editList(dataBase, dataBaseSize);
+                break;
             
         }
     }

@@ -28,11 +28,97 @@ double readDoubleInLine() {
     return number;
 }
 
+
+Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
+    Student *b = new Student[dataBaseSize + 1];
+    for(int i = 0; i < dataBaseSize; ++i){
+        b[i] = dataBase[i];
+    }
+
+    delete [] dataBase;
+
+    b[dataBaseSize] = x;
+    dataBaseSize++;
+    return b;
+}
+
+
+Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
+    Student *b = new Student[dataBaseSize - 1];
+    int i = 0, j = 0;
+    for(;i != index && i < dataBaseSize; ++i, ++j){
+        b[j] = dataBase[i];
+    }
+    ++i;
+    for(;i != index && i < dataBaseSize; ++i, ++j){
+        b[j] = dataBase[i];
+    }
+
+    delete [] dataBase;
+    dataBaseSize--;
+    return b;
+}
+
+bool findInArray(int* resIndexes, int size, int x){
+    bool isFound = false;
+    for(int i = 0; i < size; ++i){
+        if(resIndexes[i] == x)
+            return true;
+    }
+    if(!isFound)
+        false;
+}
+
+int findInListForIndex(Student *dataBase, const int &dataBaseSize){
+    cout << "Введите ФИО студента для удаления из списка: ";
+    string deleteName; cin >> deleteName;
+    bool elementFound = false, moreThanOne = false;
+    int resIndex, tmp = 0;
+    int* resIndexes = new int[dataBaseSize];
+    for(int i = 0; i < dataBaseSize; ++i){
+        if(dataBase[i].FIO == deleteName && elementFound == false){
+            elementFound = true;
+            resIndex = i;
+            resIndexes[tmp] = i;
+            ++tmp;
+        }else if(dataBase[i].FIO == deleteName && elementFound == true){
+            moreThanOne = true;
+            resIndexes[tmp] = i;
+            ++tmp;
+        }
+    }
+
+    if(!elementFound){
+        cout << "Студент не найден! Удаление дальше невозмоно.\n";
+        return -INF;
+    }else if(!moreThanOne && elementFound){
+        return resIndex;
+    }else{
+        cout << "Найдены " << tmp << " студентов с данным ФИО, выберите номер определнного студента с данной фамилией для удаления: ";
+        for(int i = 0; i < tmp; ++i){
+            if(i == tmp - 1)
+                cout << resIndexes[i] + 1;
+            else
+                cout << resIndexes[i] + 1 << ", ";
+        }
+        cout << "\nВвод: ";
+        int N = readIntegerInLine() - 1;
+        while(N == -INF && !(findInArray(resIndexes, tmp, N))){
+            if(N != -INF)
+                cout << "Некорректный ввод! Введите только предложенный номер: ";
+            N = readIntegerInLine();
+        }
+        return N;
+    }
+}
+
+
+
 void printMenu(){
         cout << "\n\t\t\tМеню Задание 1\n";
         cout << "1 - Создание списка студентов\n"; 
         cout << "2 - Просмотр списка\n";
-        cout << "3 - Поиск студентапо ФИО\n"; 
+        cout << "3 - Поиск студента по ФИО\n"; 
         cout << "4 - Редактирование списка\n"; 
         cout << "5 - Сортировать по доходу на члена семьи\n"; 
         cout << "6 - Вывести студентов, доход на члена семьи которых < 2 минимальных зарплат\n"; 
@@ -40,6 +126,67 @@ void printMenu(){
         cout << "Ввод: ";
 }
 
+Student* editList(Student *dataBase, int &dataBaseSize){
+    cout << "Введите + для добавления, - для удаления студента(+/-): ";
+    string buffer; cin >> buffer;
+    while(buffer != "+" && buffer != "-"){
+        cout << "Введите только + или - : ";
+        cin >> buffer;
+    }
+    if(buffer == "+"){
+        Student B;
+        cout << "Введите ФИО новго студента: ";
+        cin.ignore();
+        getline(cin, B.FIO);
+        cout << "Введите номер группы нового студента: ";
+        B.group = readIntegerInLine();
+        while(B.group < 0){
+            if(B.group != -INF)
+                cout << "Некорректный ввод! Введите натуральное число: ";
+            B.group = readIntegerInLine();
+        }
+        cout << "Введите средний балл нового студента: ";
+        B.averageMark = readDoubleInLine();
+        while(B.averageMark < 0){
+            if(B.averageMark != -INF)
+                cout << "Некорректный ввод! Введите вещественное число > 0: ";
+            B.averageMark = readDoubleInLine();
+        }
+        cout << "Введите доход на члена семьи нового студента: ";
+        B.familyIncome = readDoubleInLine();
+        while(B.familyIncome < 0){
+            if(B.familyIncome != -INF)
+                cout << "Некорректный ввод! Введите вещественное число > 0: ";
+            B.familyIncome = readDoubleInLine();
+        }
+        dataBase = addElement(dataBase, dataBaseSize, B);
+        return dataBase;
+    }else{
+        int index = findInListForIndex(dataBase, dataBaseSize);
+        if(index != -INF){
+            dataBase = deleteElement(dataBase, dataBaseSize, index);
+        }
+        return dataBase;
+    }
+}
+
+
+
+void findInList(Student *dataBase, const int &dataBaseSize){
+    cout << "\nВведите ФИО студента(Учитывая все пробелы): ";
+    string buffer; cin >> buffer;
+    bool elementFound = false;
+    for(int i = 0; i < dataBaseSize; ++i){
+        if(dataBase[i].FIO == buffer){
+            elementFound = true;
+            cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
+            " , доход на члена семьи " << dataBase[i].familyIncome << '\n';
+        }
+    }
+
+    if(!elementFound)
+        cout << "Студент не найден!\n";
+}
 
 void showList(Student *dataBase, int size){
     cout << '\n';
@@ -66,19 +213,6 @@ void sortByMinIncome(Student *a, int size){
         if(min != i)
             swapStruct(a[i], a[min]);
     }
-}
-
-Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
-    Student *b = new Student[dataBaseSize + 1];
-    for(int i = 0; i < dataBaseSize; ++i){
-        b[i] = dataBase[i];
-    }
-
-    delete [] dataBase;
-
-    b[dataBaseSize] = x;
-    dataBaseSize++;
-    return b;
 }
 
 void waitForInput() {
@@ -154,7 +288,40 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
         dataBaseSize = N;
         return dataBase;
     }else if(choice == 2){
-
+        int i = 0;
+        while(true){
+            Student B;
+            cout << "Введите ФИО " << i+1 << " студента: ";
+            cin.ignore();
+            getline(cin, B.FIO);
+            if(B.FIO == ""){
+                cin.putback('\n');
+                return dataBase;
+            }
+            cout << "Введите номер группы " << i+1 << " студента: ";
+            B.group = readIntegerInLine();
+            while(B.group < 0){
+                if(B.group != -INF)
+                    cout << "Некорректный ввод! Введите натуральное число: ";
+                B.group = readIntegerInLine();
+            }
+            cout << "Введите средний балл " << i+1 << " студента: ";
+            B.averageMark = readDoubleInLine();
+            while(B.averageMark < 0){
+                if(B.averageMark != -INF)
+                    cout << "Некорректный ввод! Введите вещественное число > 0: ";
+                B.averageMark = readDoubleInLine();
+            }
+            cout << "Введите доход на члена семьи " << i+1 << " студента: ";
+            B.familyIncome = readDoubleInLine();
+            while(B.familyIncome < 0){
+                if(B.familyIncome != -INF)
+                    cout << "Некорректный ввод! Введите вещественное число > 0: ";
+                B.familyIncome = readDoubleInLine();
+            }
+            dataBase = addElement(dataBase, dataBaseSize, B);
+            i++;
+        }
     }else{
         dataBaseSize = 0;
         Student *dataBase = nullptr;
