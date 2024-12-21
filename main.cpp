@@ -38,6 +38,7 @@ int main(){
 
             case 1:
                 dataBase = inputStudents(dataBase, dataBaseSize);
+                removeWhiteSpacesFromList(dataBase, dataBaseSize);
                 break;
 
             case 2:

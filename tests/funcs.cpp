@@ -115,7 +115,27 @@ int findInListForIndex(Student *dataBase, const int &dataBaseSize){
     }
 }
 
+string newStringInInterval(const string &str, const int & end){
+    string newStr;
+    for(int i = 0;i < end; ++i){ ////////////////????????????????????????????????????????????????????????????????????7
+        newStr += str[i];
+    }
+    return newStr;
+}
 
+void removeWhiteSpacesFromList(Student *dataBase, const int &dataBaseSize){
+    for(int i = 0; i < dataBaseSize; ++i){
+        string str = dataBase[i].FIO;
+        if(str[str.length() - 1] == ' '){
+            int j = str.length() - 1;
+            while(str[j] == ' '){
+                j--;
+            }
+            str = newStringInInterval(str, j+1);
+            dataBase[i].FIO = str;
+        }
+    }
+}
 
 void printMenu(){
         cout << "\n\t\t\tМеню Задание 1\n";
