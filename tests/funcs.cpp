@@ -141,9 +141,9 @@ string newStringInInterval(const string &str, const int & end){
 void removeWhiteSpacesFromList(Student *dataBase, const int &dataBaseSize){
     for(int i = 0; i < dataBaseSize; ++i){
         string str = dataBase[i].FIO;
-        if(str[str.length() - 1] == ' '){
+        if(str[str.length() - 1] == ' ' || str[str.length() - 1] == '\t'){
             int j = str.length() - 1;
-            while(str[j] == ' '){
+            while(str[j] == ' ' || str[j] == '\t'){
                 j--;
             }
             str = newStringInInterval(str, j+1);
