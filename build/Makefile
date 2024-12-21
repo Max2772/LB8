@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/Documents/453502/ОАиП/LR7/Task_1
+CMAKE_SOURCE_DIR = /home/user/Documents/453502/ОАиП/LabWork_8/Task_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/Documents/453502/ОАиП/LR7/Task_1/build
+CMAKE_BINARY_DIR = /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/453502/ОАиП/LR7/Task_1/build/CMakeFiles /home/user/Documents/453502/ОАиП/LR7/Task_1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build/CMakeFiles /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/453502/ОАиП/LR7/Task_1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,30 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+funcs.o: funcs.cpp.o
+.PHONY : funcs.o
+
+# target to build an object file
+funcs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/funcs.cpp.o
+.PHONY : funcs.cpp.o
+
+funcs.i: funcs.cpp.i
+.PHONY : funcs.i
+
+# target to preprocess a source file
+funcs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/funcs.cpp.i
+.PHONY : funcs.cpp.i
+
+funcs.s: funcs.cpp.s
+.PHONY : funcs.s
+
+# target to generate assembly for a file
+funcs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/funcs.cpp.s
+.PHONY : funcs.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
+	@echo "... funcs.o"
+	@echo "... funcs.i"
+	@echo "... funcs.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

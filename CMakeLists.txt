@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
-project(LabWork7)
 
-set(SOURCE_FILES main.cpp)
+project(LabWork8)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(USE_ADDRESS_SANITIZER "Enable AddressSanitizer" OFF)
 option(USE_THREAD_SANITIZER "Enable ThreadSanitizer" OFF)
@@ -16,8 +18,16 @@ else()
     set(SANITIZER_FLAGS "")
 endif()
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SANITIZER_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZER_FLAGS}")
 
-add_executable(app main.cpp)
+set(SRCS
+    main.cpp
+    funcs.cpp
+    head.h
+)
+
+add_executable(app ${SRCS})
+target_link_libraries(app PRIVATE pthread)
 

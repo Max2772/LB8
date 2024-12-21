@@ -1,6 +1,5 @@
 #include <iostream>
-#include "tests/head.h"
-#include "tests/funcs.cpp"
+#include "head.h"
 
 using namespace std;
 
@@ -62,6 +61,10 @@ int main(){
                 break;
             
         }
+    }
+    if(dataBase != nullptr || dataBaseSize != 0){
+        delete [] dataBase;
+        dataBase = nullptr;
     }
     return 0;
 }

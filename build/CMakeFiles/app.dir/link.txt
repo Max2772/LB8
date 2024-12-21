@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/app.dir/main.cpp.o -o app 
+/usr/bin/c++  -pthread -fsanitize=thread  -fsanitize=thread CMakeFiles/app.dir/main.cpp.o CMakeFiles/app.dir/funcs.cpp.o -o app  -lpthread 

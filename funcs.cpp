@@ -1,12 +1,11 @@
 #include <iostream>
-#include <string>
 #include <locale>
 #include <codecvt>
 #include "head.h"
 
 using namespace std;
 
-int readIntegerInLine() {
+int readIntegerInLine(){
     int number;
     if(!(cin >> number) || (cin.peek() != '\n'))
     {
@@ -18,7 +17,7 @@ int readIntegerInLine() {
     return number;
 }
 
-double readDoubleInLine() {
+double readDoubleInLine(){
     double number;
     if(!(cin >> number) || (cin.peek() != '\n'))
     {
@@ -31,7 +30,7 @@ double readDoubleInLine() {
     return number;
 }
 
-int determineGroup(const double &averageMark) {
+int determineGroup(const double &averageMark){
     if(averageMark >= 8.5){
         return 453501;
     }else if(averageMark >= 6.5){
@@ -105,8 +104,12 @@ int findInListForIndex(Student *dataBase, const int &dataBaseSize){
 
     if(!elementFound){
         cout << "Студент не найден! Проведение операции невозмоно.\n";
+        delete [] resIndexes;
+        resIndexes = nullptr;
         return -INF;
     }else if(!moreThanOne && elementFound){
+        delete [] resIndexes;
+        resIndexes = nullptr;
         return resIndex;
     }else{
         cout << "Найдены " << tmp << " студентов с данным ФИО, выберите номер определнного студента с данным ФИО: ";
@@ -122,8 +125,11 @@ int findInListForIndex(Student *dataBase, const int &dataBaseSize){
             if(N == (-INF - 1))
                 continue;
 
-            if(findInArray(resIndexes, tmp, N))
+            if(findInArray(resIndexes, tmp, N)){
+                delete [] resIndexes;
+                resIndexes = nullptr;
                 return N;
+            }
 
             cout << "Некорректный ввод! Введите только предложенные номера: ";
         }
@@ -335,7 +341,7 @@ void sortByMinIncome(Student *a, const int &dataBasesize){
     }
 }
 
-void waitForInput() {
+void waitForInput(){
     cout << "Нажмите ENTER, чтобы продолжить...";
     cin.ignore();
     cin.get();
