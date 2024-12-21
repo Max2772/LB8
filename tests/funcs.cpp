@@ -31,7 +31,6 @@ double readDoubleInLine() {
     return number;
 }
 
-
 Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
     Student *b = new Student[dataBaseSize + 1];
     for(int i = 0; i < dataBaseSize; ++i){
@@ -44,7 +43,6 @@ Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
     dataBaseSize++;
     return b;
 }
-
 
 Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
     Student *b = new Student[dataBaseSize - 1];
@@ -117,7 +115,7 @@ int findInListForIndex(Student *dataBase, const int &dataBaseSize){
 
 string newStringInInterval(const string &str, const int & end){
     string newStr;
-    for(int i = 0;i < end; ++i){ ////////////////????????????????????????????????????????????????????????????????????7
+    for(int i = 0;i < end; ++i){
         newStr += str[i];
     }
     return newStr;
@@ -166,10 +164,10 @@ void outputLessThanTwoIncome(Student *dataBase, int size, const int &minIncome){
 
 
 Student* editList(Student *dataBase, int &dataBaseSize){
-    cout << "Введите + для добавления, - для удаления студента(+/-): ";
+    cout << "Введите + для добавления, - для удаления студента, * - для редактирования информации студента(+/-/*): ";
     string buffer; cin >> buffer;
-    while(buffer != "+" && buffer != "-"){
-        cout << "Введите только + или - : ";
+    while(buffer != "+" && buffer != "-" && buffer != "*"){
+        cout << "Введите только +, - или * : ";
         cin >> buffer;
     }
     if(buffer == "+"){
@@ -200,11 +198,62 @@ Student* editList(Student *dataBase, int &dataBaseSize){
         }
         dataBase = addElement(dataBase, dataBaseSize, B);
         return dataBase;
-    }else{
+    }else if(buffer == "-"){
         int index = findInListForIndex(dataBase, dataBaseSize);
         if(index != -INF){
             dataBase = deleteElement(dataBase, dataBaseSize, index);
         }
+        return dataBase;
+    }else{
+        cout << "Введите полное ФИО студента, информацию которого хотели бы редактировать: ";
+        string name;
+        cin.ignore();
+        getline(cin, name);
+        cin.putback('\n');
+        bool isFound = false; int idx;
+        for(int i = 0; i < dataBaseSize; ++i){
+            if(dataBase[i].FIO == name){
+                idx = i;
+                isFound = true;
+                break;
+            }
+        }
+        
+        if(!isFound){
+            cout << "Студент не найден! Редактирование дальше невозможно.\n";
+            return dataBase;
+        }
+
+        cout << dataBase[idx].FIO << ", группа " << dataBase[idx].group << " , средний балл: " << dataBase[idx].averageMark <<
+            " , доход на члена семьи " << dataBase[idx].familyIncome << '\n';
+        cout << "Перепишите новые данные студента:\n";
+
+        Student B;
+        cout << "Введите ФИО студента: ";
+        cin.ignore();
+        getline(cin, B.FIO);
+        cout << "Введите номер группы студента: ";
+        B.group = readIntegerInLine();
+        while(B.group < 0){
+            if(B.group != -INF)
+                cout << "Некорректный ввод! Введите натуральное число: ";
+            B.group = readIntegerInLine();
+        }
+        cout << "Введите средний балл студента: ";
+        B.averageMark = readDoubleInLine();
+        while(B.averageMark < 0){
+            if(B.averageMark != -INF)
+                cout << "Некорректный ввод! Введите вещественное число > 0: ";
+            B.averageMark = readDoubleInLine();
+        }
+        cout << "Введите доход на члена семьи студента: ";
+        B.familyIncome = readDoubleInLine();
+        while(B.familyIncome < 0){
+            if(B.familyIncome != -INF)
+                cout << "Некорректный ввод! Введите вещественное число > 0: ";
+            B.familyIncome = readDoubleInLine();
+        }
+        dataBase[idx] = B;
         return dataBase;
     }
 }
@@ -397,7 +446,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
             }
                 if(buffer[0] == 'Y' || buffer[0] == 'y'){
                     Student B;
-                    cout << "Введите ФИО"  << " студента: ";
+                    cout << "Введите ФИО студента: ";
                     cin.ignore();
                     getline(cin, B.FIO);
                     cout << "Введите номер группы студента: ";
