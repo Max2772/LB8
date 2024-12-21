@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+#include <locale>
+#include <codecvt>
 #include "head.h"
 
 using namespace std;
@@ -186,14 +189,29 @@ Student* editList(Student *dataBase, int &dataBaseSize){
     }
 }
 
+string russianStringToLower(const string &str){ // Uses locale and codecvt, used for tolower();
+    wstring_convert<codecvt_utf8<wchar_t>, wchar_t> converter;
+    wstring wide_str = converter.from_bytes(str);
 
+    for (wchar_t &ch : wide_str) {
+        ch = towlower(ch);
+    }
+
+    return converter.to_bytes(wide_str);
+}
 
 void findInList(Student *dataBase, const int &dataBaseSize){
-    cout << "\nВведите ФИО студента(Учитывая все пробелы): ";
-    string buffer; cin >> buffer;
+    cout << "\nВведите ФИО студента: ";
+    string buffer;
+    cin.ignore();
+    getline(cin,buffer);
+    cin.putback('\n');
+    buffer = russianStringToLower(buffer);
     bool elementFound = false;
     for(int i = 0; i < dataBaseSize; ++i){
-        if(dataBase[i].FIO == buffer){
+        string lowerFIO = dataBase[i].FIO;
+        lowerFIO = russianStringToLower(lowerFIO);
+        if(lowerFIO.find(buffer) != string::npos){
             elementFound = true;
             cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
             " , доход на члена семьи " << dataBase[i].familyIncome << '\n';

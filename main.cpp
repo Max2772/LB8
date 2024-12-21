@@ -5,6 +5,7 @@
 using namespace std;
 
 int main(){
+    setlocale(LC_ALL, "");
     cout << "Введите миниальную зарплату в рублях 2024 год: ";
     double minIncome = readDoubleInLine();
     while ((minIncome <= 0)) {
