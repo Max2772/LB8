@@ -24,7 +24,13 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZER_FLAGS}")
 
 set(SRCS
     main.cpp
-    funcs.cpp
+    array_utils.cpp
+    input.cpp
+    logic.cpp
+    output.cpp
+    search_sort.cpp
+    string_utils.cpp
+    struct_input.cpp
     head.h
 )
 

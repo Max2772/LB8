@@ -129,29 +129,77 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-funcs.o: funcs.cpp.o
-.PHONY : funcs.o
+array_utils.o: array_utils.cpp.o
+.PHONY : array_utils.o
 
 # target to build an object file
-funcs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/funcs.cpp.o
-.PHONY : funcs.cpp.o
+array_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/array_utils.cpp.o
+.PHONY : array_utils.cpp.o
 
-funcs.i: funcs.cpp.i
-.PHONY : funcs.i
+array_utils.i: array_utils.cpp.i
+.PHONY : array_utils.i
 
 # target to preprocess a source file
-funcs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/funcs.cpp.i
-.PHONY : funcs.cpp.i
+array_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/array_utils.cpp.i
+.PHONY : array_utils.cpp.i
 
-funcs.s: funcs.cpp.s
-.PHONY : funcs.s
+array_utils.s: array_utils.cpp.s
+.PHONY : array_utils.s
 
 # target to generate assembly for a file
-funcs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/funcs.cpp.s
-.PHONY : funcs.cpp.s
+array_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/array_utils.cpp.s
+.PHONY : array_utils.cpp.s
+
+input.o: input.cpp.o
+.PHONY : input.o
+
+# target to build an object file
+input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/input.cpp.o
+.PHONY : input.cpp.o
+
+input.i: input.cpp.i
+.PHONY : input.i
+
+# target to preprocess a source file
+input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/input.cpp.i
+.PHONY : input.cpp.i
+
+input.s: input.cpp.s
+.PHONY : input.s
+
+# target to generate assembly for a file
+input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/input.cpp.s
+.PHONY : input.cpp.s
+
+logic.o: logic.cpp.o
+.PHONY : logic.o
+
+# target to build an object file
+logic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/logic.cpp.o
+.PHONY : logic.cpp.o
+
+logic.i: logic.cpp.i
+.PHONY : logic.i
+
+# target to preprocess a source file
+logic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/logic.cpp.i
+.PHONY : logic.cpp.i
+
+logic.s: logic.cpp.s
+.PHONY : logic.s
+
+# target to generate assembly for a file
+logic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/logic.cpp.s
+.PHONY : logic.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -177,6 +225,102 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+output.o: output.cpp.o
+.PHONY : output.o
+
+# target to build an object file
+output.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/output.cpp.o
+.PHONY : output.cpp.o
+
+output.i: output.cpp.i
+.PHONY : output.i
+
+# target to preprocess a source file
+output.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/output.cpp.i
+.PHONY : output.cpp.i
+
+output.s: output.cpp.s
+.PHONY : output.s
+
+# target to generate assembly for a file
+output.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/output.cpp.s
+.PHONY : output.cpp.s
+
+search_sort.o: search_sort.cpp.o
+.PHONY : search_sort.o
+
+# target to build an object file
+search_sort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/search_sort.cpp.o
+.PHONY : search_sort.cpp.o
+
+search_sort.i: search_sort.cpp.i
+.PHONY : search_sort.i
+
+# target to preprocess a source file
+search_sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/search_sort.cpp.i
+.PHONY : search_sort.cpp.i
+
+search_sort.s: search_sort.cpp.s
+.PHONY : search_sort.s
+
+# target to generate assembly for a file
+search_sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/search_sort.cpp.s
+.PHONY : search_sort.cpp.s
+
+string_utils.o: string_utils.cpp.o
+.PHONY : string_utils.o
+
+# target to build an object file
+string_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/string_utils.cpp.o
+.PHONY : string_utils.cpp.o
+
+string_utils.i: string_utils.cpp.i
+.PHONY : string_utils.i
+
+# target to preprocess a source file
+string_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/string_utils.cpp.i
+.PHONY : string_utils.cpp.i
+
+string_utils.s: string_utils.cpp.s
+.PHONY : string_utils.s
+
+# target to generate assembly for a file
+string_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/string_utils.cpp.s
+.PHONY : string_utils.cpp.s
+
+struct_input.o: struct_input.cpp.o
+.PHONY : struct_input.o
+
+# target to build an object file
+struct_input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/struct_input.cpp.o
+.PHONY : struct_input.cpp.o
+
+struct_input.i: struct_input.cpp.i
+.PHONY : struct_input.i
+
+# target to preprocess a source file
+struct_input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/struct_input.cpp.i
+.PHONY : struct_input.cpp.i
+
+struct_input.s: struct_input.cpp.s
+.PHONY : struct_input.s
+
+# target to generate assembly for a file
+struct_input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/struct_input.cpp.s
+.PHONY : struct_input.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +330,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
-	@echo "... funcs.o"
-	@echo "... funcs.i"
-	@echo "... funcs.s"
+	@echo "... array_utils.o"
+	@echo "... array_utils.i"
+	@echo "... array_utils.s"
+	@echo "... input.o"
+	@echo "... input.i"
+	@echo "... input.s"
+	@echo "... logic.o"
+	@echo "... logic.i"
+	@echo "... logic.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... output.o"
+	@echo "... output.i"
+	@echo "... output.s"
+	@echo "... search_sort.o"
+	@echo "... search_sort.i"
+	@echo "... search_sort.s"
+	@echo "... string_utils.o"
+	@echo "... string_utils.i"
+	@echo "... string_utils.s"
+	@echo "... struct_input.o"
+	@echo "... struct_input.i"
+	@echo "... struct_input.s"
 .PHONY : help
 
 

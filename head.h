@@ -1,6 +1,6 @@
 #pragma once
 
-using std::string;
+using namespace std;
 
 typedef struct{
     string FIO;
