@@ -60,14 +60,12 @@ Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
     return b;
 }
 
-bool findInArray(int* resIndexes, int size, int x){
-    bool isFound = false;
+bool findInArray(int* resIndexes, const int &size, const int &x){
     for(int i = 0; i < size; ++i){
         if(resIndexes[i] == x)
             return true;
     }
-    if(!isFound)
-        false;
+    return false;
 }
 
 int findInListForIndex(Student *dataBase, const int &dataBaseSize){
@@ -103,13 +101,16 @@ int findInListForIndex(Student *dataBase, const int &dataBaseSize){
                 cout << resIndexes[i] + 1 << ", ";
         }
         cout << "\nВвод: ";
-        int N = readIntegerInLine() - 1;
-        while(N == -INF && !(findInArray(resIndexes, tmp, N))){
-            if(N != -INF)
-                cout << "Некорректный ввод! Введите только предложенный номер: ";
-            N = readIntegerInLine();
+        while(true){
+            int N = readIntegerInLine() - 1;
+            if(N == (-INF - 1))
+                continue;
+
+            if(findInArray(resIndexes, tmp, N))
+                return N;
+
+            cout << "Некорректный ввод! Введите только предложенные номера: ";
         }
-        return N;
     }
 }
 
@@ -197,6 +198,7 @@ Student* editList(Student *dataBase, int &dataBaseSize){
             B.familyIncome = readDoubleInLine();
         }
         dataBase = addElement(dataBase, dataBaseSize, B);
+        removeWhiteSpacesFromList(dataBase, dataBaseSize);
         return dataBase;
     }else if(buffer == "-"){
         int index = findInListForIndex(dataBase, dataBaseSize);
