@@ -31,6 +31,20 @@ double readDoubleInLine() {
     return number;
 }
 
+int determineGroup(const double &averageMark) {
+    if(averageMark >= 8.5){
+        return 453501;
+    }else if(averageMark >= 6.5){
+        return 453502;
+    }else if(averageMark >= 5)
+        return 453503;
+    else if(averageMark >= 3.5){
+        return 453504;
+    }else
+        return 453505;
+}
+
+
 Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
     Student *b = new Student[dataBaseSize + 1];
     for(int i = 0; i < dataBaseSize; ++i){
@@ -174,19 +188,19 @@ void editElement(Student *dataBase, int idx){
             cout << "Введите новое ФИО студента: ";
             cin.ignore();
             getline(cin, B.FIO);
-            cout << "Введите новый номер группы студента: ";
-            B.group = readIntegerInLine();
-            while(B.group < 0){
-                if(B.group != -INF)
-                    cout << "Некорректный ввод! Введите натуральное число: ";
-                B.group = readIntegerInLine();
-            }
             cout << "Введите новый средний балл студента: ";
             B.averageMark = readDoubleInLine();
             while(B.averageMark < 0){
                 if(B.averageMark != -INF)
                     cout << "Некорректный ввод! Введите вещественное число > 0: ";
                 B.averageMark = readDoubleInLine();
+            }
+            cout << "Введите новый номер группы студента: ";
+            B.group = readIntegerInLine();
+            while(B.group < 0){
+                if(B.group != -INF)
+                    cout << "Некорректный ввод! Введите натуральное число: ";
+                B.group = readIntegerInLine();
             }
             cout << "Введите новый доход на члена семьи студента: ";
             B.familyIncome = readDoubleInLine();
@@ -210,19 +224,19 @@ Student* editList(Student *dataBase, int &dataBaseSize){
         cout << "Введите ФИО новго студента: ";
         cin.ignore();
         getline(cin, B.FIO);
-        cout << "Введите номер группы нового студента: ";
-        B.group = readIntegerInLine();
-        while(B.group < 0){
-            if(B.group != -INF)
-                cout << "Некорректный ввод! Введите натуральное число: ";
-            B.group = readIntegerInLine();
-        }
         cout << "Введите средний балл нового студента: ";
         B.averageMark = readDoubleInLine();
         while(B.averageMark < 0){
             if(B.averageMark != -INF)
                 cout << "Некорректный ввод! Введите вещественное число > 0: ";
             B.averageMark = readDoubleInLine();
+        }
+        cout << "Введите номер группы нового студента: ";
+        B.group = readIntegerInLine();
+        while(B.group < 0){
+            if(B.group != -INF)
+                cout << "Некорректный ввод! Введите натуральное число: ";
+            B.group = readIntegerInLine();
         }
         cout << "Введите доход на члена семьи нового студента: ";
         B.familyIncome = readDoubleInLine();
@@ -343,6 +357,16 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                dataBaseSize = 0;
         }
     }
+    bool autoGroup = false;
+    cout << "Желаете ли вы включить автоматичесое распределние по группам по среднему баллу?(y/n): ";
+    string buffer; cin >> buffer;
+    while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+        cout << "Введите только Y/y - да, N/n -нет: ";
+            cin >> buffer;
+    }
+    if(buffer == "Y" || buffer == "y")
+        autoGroup = true;
+        
     cout << "\nВыберите способ ввода данных:\n";
     cout << "1. Ввод заранее заданного количества структур\n";
     cout << "2. Ввод до появления структуры с заданным признаком\n";
@@ -369,13 +393,6 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
             cout << "Введите ФИО " << i+1 << " студента: ";
             cin.ignore();
             getline(cin, dataBase[i].FIO);
-            cout << "Введите номер группы " << i+1 << " студента: ";
-            dataBase[i].group = readIntegerInLine();
-            while(dataBase[i].group < 0){
-                if(dataBase[i].group != -INF)
-                    cout << "Некорректный ввод! Введите натуральное число: ";
-                dataBase[i].group = readIntegerInLine();
-            }
             cout << "Введите средний балл " << i+1 << " студента: ";
             dataBase[i].averageMark = readDoubleInLine();
             while(dataBase[i].averageMark < 0){
@@ -383,6 +400,19 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                     cout << "Некорректный ввод! Введите вещественное число > 0: ";
                 dataBase[i].averageMark = readDoubleInLine();
             }
+
+            if(!autoGroup){
+                cout << "Введите номер группы " << i+1 << " студента: ";
+                dataBase[i].group = readIntegerInLine();
+                while(dataBase[i].group < 0){
+                    if(dataBase[i].group != -INF)
+                        cout << "Некорректный ввод! Введите натуральное число: ";
+                    dataBase[i].group = readIntegerInLine();
+                }
+            }else{
+                dataBase[i].group = determineGroup(dataBase[i].averageMark);
+            }
+
             cout << "Введите доход на члена семьи " << i+1 << " студента: ";
             dataBase[i].familyIncome = readDoubleInLine();
             while(dataBase[i].familyIncome < 0){
@@ -404,13 +434,6 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                 cin.putback('\n');
                 return dataBase;
             }
-            cout << "Введите номер группы " << i+1 << " студента: ";
-            B.group = readIntegerInLine();
-            while(B.group < 0){
-                if(B.group != -INF)
-                    cout << "Некорректный ввод! Введите натуральное число: ";
-                B.group = readIntegerInLine();
-            }
             cout << "Введите средний балл " << i+1 << " студента: ";
             B.averageMark = readDoubleInLine();
             while(B.averageMark < 0){
@@ -418,6 +441,19 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                     cout << "Некорректный ввод! Введите вещественное число > 0: ";
                 B.averageMark = readDoubleInLine();
             }
+
+            if(!autoGroup){
+                cout << "Введите номер группы " << i+1 << " студента: ";
+                B.group = readIntegerInLine();
+                while(B.group < 0){
+                    if(B.group != -INF)
+                        cout << "Некорректный ввод! Введите натуральное число: ";
+                    B.group = readIntegerInLine();
+                }
+            }else{
+                B.group = determineGroup(B.averageMark);
+            }
+
             cout << "Введите доход на члена семьи " << i+1 << " студента: ";
             B.familyIncome = readDoubleInLine();
             while(B.familyIncome < 0){
@@ -443,13 +479,6 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                     cout << "Введите ФИО студента: ";
                     cin.ignore();
                     getline(cin, B.FIO);
-                    cout << "Введите номер группы студента: ";
-                    B.group = readIntegerInLine();
-                    while(B.group < 0){
-                        if(B.group != -INF)
-                            cout << "Некорректный ввод! Введите натуральное число: ";
-                        B.group = readIntegerInLine();
-                    }
                     cout << "Введите средний балл студента: ";
                     B.averageMark = readDoubleInLine();
                     while(B.averageMark < 0){
@@ -457,6 +486,19 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                             cout << "Некорректный ввод! Введите вещественное число > 0: ";
                         B.averageMark = readDoubleInLine();
                     }
+
+                    if(!autoGroup){
+                        cout << "Введите номер группы студента: ";
+                        B.group = readIntegerInLine();
+                        while(B.group < 0){
+                            if(B.group != -INF)
+                                cout << "Некорректный ввод! Введите натуральное число: ";
+                            B.group = readIntegerInLine();
+                        }
+                    }else{
+                        B.group = determineGroup(B.averageMark);
+                    }
+
                     cout << "Введите доход на члена семьи студента: ";
                     B.familyIncome = readDoubleInLine();
                     while(B.familyIncome < 0){
