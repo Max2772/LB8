@@ -1,30 +1,9 @@
 #include <iostream>
-#include <locale>
-#include <codecvt>
 
 #include "../header-files/task1.h"
 
 #include "../../general/header-files/constants.h"
 #include "../../general/header-files/funcs.h"
-
-string newStringInInterval(const string &str, const int & end){
-    string newStr;
-    for(int i = 0;i < end; ++i){
-        newStr += str[i];
-    }
-    return newStr;
-}
-
-string russianStringToLower(const string &str){ // Uses locale and codecvt, used for tolower();
-    wstring_convert<codecvt_utf8<wchar_t>, wchar_t> converter;
-    wstring wide_str = converter.from_bytes(str);
-
-    for (wchar_t &ch : wide_str) {
-        ch = towlower(ch);
-    }
-
-    return converter.to_bytes(wide_str);
-}
 
 void removeWhiteSpacesFromList(Student *dataBase, const int &dataBaseSize){
     for(int i = 0; i < dataBaseSize; ++i){

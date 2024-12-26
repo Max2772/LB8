@@ -27,11 +27,11 @@ void task1(){
     
     Student* dataBase = nullptr;
     int dataBaseSize = 0;
-    dataBase = loadDataBaseFromFile(dataBaseSize, "Task1.dat");
+    dataBase = loadDataBaseFromFileTask1(dataBaseSize, "Task1.dat");
 
     while(true){
         waitForInput();
-        printMenu();
+        printMenuTask1();
         int choice = readIntegerInLine();
         while(choice < 0 || choice > 7){
             if(choice != -INF)

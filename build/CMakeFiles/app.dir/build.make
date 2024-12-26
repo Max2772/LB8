@@ -195,10 +195,122 @@ CMakeFiles/app.dir/Task_1/src/struct_input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_1/src/struct_input.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_1/src/struct_input.cpp -o CMakeFiles/app.dir/Task_1/src/struct_input.cpp.s
 
+CMakeFiles/app.dir/Task_2/src/task2.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/task2.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/task2.cpp
+CMakeFiles/app.dir/Task_2/src/task2.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/app.dir/Task_2/src/task2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/task2.cpp.o -MF CMakeFiles/app.dir/Task_2/src/task2.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/task2.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/task2.cpp
+
+CMakeFiles/app.dir/Task_2/src/task2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/task2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/task2.cpp > CMakeFiles/app.dir/Task_2/src/task2.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/task2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/task2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/task2.cpp -o CMakeFiles/app.dir/Task_2/src/task2.cpp.s
+
+CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/array_utils.cpp
+CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o -MF CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/array_utils.cpp
+
+CMakeFiles/app.dir/Task_2/src/array_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/array_utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/array_utils.cpp > CMakeFiles/app.dir/Task_2/src/array_utils.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/array_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/array_utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/array_utils.cpp -o CMakeFiles/app.dir/Task_2/src/array_utils.cpp.s
+
+CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/file_utils.cpp
+CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o -MF CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/file_utils.cpp
+
+CMakeFiles/app.dir/Task_2/src/file_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/file_utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/file_utils.cpp > CMakeFiles/app.dir/Task_2/src/file_utils.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/file_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/file_utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/file_utils.cpp -o CMakeFiles/app.dir/Task_2/src/file_utils.cpp.s
+
+CMakeFiles/app.dir/Task_2/src/logic.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/logic.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/logic.cpp
+CMakeFiles/app.dir/Task_2/src/logic.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/app.dir/Task_2/src/logic.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/logic.cpp.o -MF CMakeFiles/app.dir/Task_2/src/logic.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/logic.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/logic.cpp
+
+CMakeFiles/app.dir/Task_2/src/logic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/logic.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/logic.cpp > CMakeFiles/app.dir/Task_2/src/logic.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/logic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/logic.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/logic.cpp -o CMakeFiles/app.dir/Task_2/src/logic.cpp.s
+
+CMakeFiles/app.dir/Task_2/src/output.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/output.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/output.cpp
+CMakeFiles/app.dir/Task_2/src/output.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/app.dir/Task_2/src/output.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/output.cpp.o -MF CMakeFiles/app.dir/Task_2/src/output.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/output.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/output.cpp
+
+CMakeFiles/app.dir/Task_2/src/output.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/output.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/output.cpp > CMakeFiles/app.dir/Task_2/src/output.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/output.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/output.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/output.cpp -o CMakeFiles/app.dir/Task_2/src/output.cpp.s
+
+CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/search_sort.cpp
+CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o -MF CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/search_sort.cpp
+
+CMakeFiles/app.dir/Task_2/src/search_sort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/search_sort.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/search_sort.cpp > CMakeFiles/app.dir/Task_2/src/search_sort.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/search_sort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/search_sort.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/search_sort.cpp -o CMakeFiles/app.dir/Task_2/src/search_sort.cpp.s
+
+CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/string_utils.cpp
+CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o -MF CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/string_utils.cpp
+
+CMakeFiles/app.dir/Task_2/src/string_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/string_utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/string_utils.cpp > CMakeFiles/app.dir/Task_2/src/string_utils.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/string_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/string_utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/string_utils.cpp -o CMakeFiles/app.dir/Task_2/src/string_utils.cpp.s
+
+CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/struct_input.cpp
+CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o -MF CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o.d -o CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/struct_input.cpp
+
+CMakeFiles/app.dir/Task_2/src/struct_input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/Task_2/src/struct_input.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/struct_input.cpp > CMakeFiles/app.dir/Task_2/src/struct_input.cpp.i
+
+CMakeFiles/app.dir/Task_2/src/struct_input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/Task_2/src/struct_input.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_2/src/struct_input.cpp -o CMakeFiles/app.dir/Task_2/src/struct_input.cpp.s
+
 CMakeFiles/app.dir/general/src/funcs.cpp.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/general/src/funcs.cpp.o: /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/src/funcs.cpp
 CMakeFiles/app.dir/general/src/funcs.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/app.dir/general/src/funcs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/app.dir/general/src/funcs.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/general/src/funcs.cpp.o -MF CMakeFiles/app.dir/general/src/funcs.cpp.o.d -o CMakeFiles/app.dir/general/src/funcs.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/src/funcs.cpp
 
 CMakeFiles/app.dir/general/src/funcs.cpp.i: cmake_force
@@ -220,6 +332,14 @@ app_OBJECTS = \
 "CMakeFiles/app.dir/Task_1/src/search_sort.cpp.o" \
 "CMakeFiles/app.dir/Task_1/src/string_utils.cpp.o" \
 "CMakeFiles/app.dir/Task_1/src/struct_input.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/task2.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/logic.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/output.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o" \
+"CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o" \
 "CMakeFiles/app.dir/general/src/funcs.cpp.o"
 
 # External object files for target app
@@ -234,10 +354,18 @@ app: CMakeFiles/app.dir/Task_1/src/output.cpp.o
 app: CMakeFiles/app.dir/Task_1/src/search_sort.cpp.o
 app: CMakeFiles/app.dir/Task_1/src/string_utils.cpp.o
 app: CMakeFiles/app.dir/Task_1/src/struct_input.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/task2.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/logic.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/output.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o
+app: CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o
 app: CMakeFiles/app.dir/general/src/funcs.cpp.o
 app: CMakeFiles/app.dir/build.make
 app: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

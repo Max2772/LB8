@@ -152,4 +152,5 @@ CMakeFiles/app.dir/main.cpp.o: \
  /usr/include/c++/13/bits/istream.tcc \
  /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/header-files/funcs.h \
  /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/header-files/constants.h \
- /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/./Task_1/header-files/task1.h
+ /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/./Task_1/header-files/task1.h \
+ /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/./Task_2/header-files/task2.h

@@ -3,7 +3,7 @@
 #include "general/header-files/constants.h"
 // includes for Tasks
 #include "./Task_1/header-files/task1.h"
-//#include "./Task_2/header-files/task2.h"
+#include "./Task_2/header-files/task2.h"
 
 using std::cout;
 using std::cin;
@@ -32,8 +32,8 @@ int main(){
                 std::cin.ignore();
                 continue;
             case 2:
-                //task2();
-                //std::cin.ignore();
+                task2();
+                std::cin.ignore();
                 continue;
         }
 

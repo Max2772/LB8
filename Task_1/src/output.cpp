@@ -5,7 +5,7 @@
 #include "../../general/header-files/constants.h"
 #include "../../general/header-files/funcs.h"
 
-void printMenu(){
+void printMenuTask1(){
         cout << "\n\t\t\tМеню Задание 1\n";
         cout << "1 - Создание списка студентов\n"; 
         cout << "2 - Просмотр списка\n";

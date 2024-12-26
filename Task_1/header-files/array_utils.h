@@ -1,6 +1,5 @@
 #pragma once
 #include "task1.h"
-
 using namespace std;
 
 Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x);

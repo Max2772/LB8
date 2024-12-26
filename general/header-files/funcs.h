@@ -6,6 +6,16 @@ using namespace std;
 
 int readCharToStringForType(char* input);
 int readCharToStringForChoice(char* input);
+string newStringInInterval(const string &str, const int & end);
+string russianStringToLower(const string &str);\
+
+inline bool findInArray(int* resIndexes, const int &size, const int &x){
+    for(int i = 0; i < size; ++i){
+        if(resIndexes[i] == x)
+            return true;
+    }
+    return false;
+};
 
 inline int charToInteger(char* type){  
     return *type - '0';
@@ -42,7 +52,7 @@ inline int readIntegerInLine(){
         return -INF;
     }
     return number;
-}
+};
 
 inline double readDoubleInLine(){
     double number;
@@ -55,10 +65,12 @@ inline double readDoubleInLine(){
     }
     
     return number;
-}
+};
 
 inline void waitForInput(){
     cout << "Нажмите ENTER, чтобы продолжить...";
     cin.ignore();
     cin.get();
-}
+};
+
+

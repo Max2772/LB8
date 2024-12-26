@@ -32,6 +32,14 @@ set(SRCS
     Task_1/src/search_sort.cpp
     Task_1/src/string_utils.cpp
     Task_1/src/struct_input.cpp
+    Task_2/src/task2.cpp
+    Task_2/src/array_utils.cpp
+    Task_2/src/file_utils.cpp
+    Task_2/src/logic.cpp
+    Task_2/src/output.cpp
+    Task_2/src/search_sort.cpp
+    Task_2/src/string_utils.cpp
+    Task_2/src/struct_input.cpp
     general/src/funcs.cpp
 )
 

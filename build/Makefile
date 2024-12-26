@@ -321,6 +321,198 @@ Task_1/src/task1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_1/src/task1.cpp.s
 .PHONY : Task_1/src/task1.cpp.s
 
+Task_2/src/array_utils.o: Task_2/src/array_utils.cpp.o
+.PHONY : Task_2/src/array_utils.o
+
+# target to build an object file
+Task_2/src/array_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/array_utils.cpp.o
+.PHONY : Task_2/src/array_utils.cpp.o
+
+Task_2/src/array_utils.i: Task_2/src/array_utils.cpp.i
+.PHONY : Task_2/src/array_utils.i
+
+# target to preprocess a source file
+Task_2/src/array_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/array_utils.cpp.i
+.PHONY : Task_2/src/array_utils.cpp.i
+
+Task_2/src/array_utils.s: Task_2/src/array_utils.cpp.s
+.PHONY : Task_2/src/array_utils.s
+
+# target to generate assembly for a file
+Task_2/src/array_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/array_utils.cpp.s
+.PHONY : Task_2/src/array_utils.cpp.s
+
+Task_2/src/file_utils.o: Task_2/src/file_utils.cpp.o
+.PHONY : Task_2/src/file_utils.o
+
+# target to build an object file
+Task_2/src/file_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/file_utils.cpp.o
+.PHONY : Task_2/src/file_utils.cpp.o
+
+Task_2/src/file_utils.i: Task_2/src/file_utils.cpp.i
+.PHONY : Task_2/src/file_utils.i
+
+# target to preprocess a source file
+Task_2/src/file_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/file_utils.cpp.i
+.PHONY : Task_2/src/file_utils.cpp.i
+
+Task_2/src/file_utils.s: Task_2/src/file_utils.cpp.s
+.PHONY : Task_2/src/file_utils.s
+
+# target to generate assembly for a file
+Task_2/src/file_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/file_utils.cpp.s
+.PHONY : Task_2/src/file_utils.cpp.s
+
+Task_2/src/logic.o: Task_2/src/logic.cpp.o
+.PHONY : Task_2/src/logic.o
+
+# target to build an object file
+Task_2/src/logic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/logic.cpp.o
+.PHONY : Task_2/src/logic.cpp.o
+
+Task_2/src/logic.i: Task_2/src/logic.cpp.i
+.PHONY : Task_2/src/logic.i
+
+# target to preprocess a source file
+Task_2/src/logic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/logic.cpp.i
+.PHONY : Task_2/src/logic.cpp.i
+
+Task_2/src/logic.s: Task_2/src/logic.cpp.s
+.PHONY : Task_2/src/logic.s
+
+# target to generate assembly for a file
+Task_2/src/logic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/logic.cpp.s
+.PHONY : Task_2/src/logic.cpp.s
+
+Task_2/src/output.o: Task_2/src/output.cpp.o
+.PHONY : Task_2/src/output.o
+
+# target to build an object file
+Task_2/src/output.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/output.cpp.o
+.PHONY : Task_2/src/output.cpp.o
+
+Task_2/src/output.i: Task_2/src/output.cpp.i
+.PHONY : Task_2/src/output.i
+
+# target to preprocess a source file
+Task_2/src/output.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/output.cpp.i
+.PHONY : Task_2/src/output.cpp.i
+
+Task_2/src/output.s: Task_2/src/output.cpp.s
+.PHONY : Task_2/src/output.s
+
+# target to generate assembly for a file
+Task_2/src/output.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/output.cpp.s
+.PHONY : Task_2/src/output.cpp.s
+
+Task_2/src/search_sort.o: Task_2/src/search_sort.cpp.o
+.PHONY : Task_2/src/search_sort.o
+
+# target to build an object file
+Task_2/src/search_sort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/search_sort.cpp.o
+.PHONY : Task_2/src/search_sort.cpp.o
+
+Task_2/src/search_sort.i: Task_2/src/search_sort.cpp.i
+.PHONY : Task_2/src/search_sort.i
+
+# target to preprocess a source file
+Task_2/src/search_sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/search_sort.cpp.i
+.PHONY : Task_2/src/search_sort.cpp.i
+
+Task_2/src/search_sort.s: Task_2/src/search_sort.cpp.s
+.PHONY : Task_2/src/search_sort.s
+
+# target to generate assembly for a file
+Task_2/src/search_sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/search_sort.cpp.s
+.PHONY : Task_2/src/search_sort.cpp.s
+
+Task_2/src/string_utils.o: Task_2/src/string_utils.cpp.o
+.PHONY : Task_2/src/string_utils.o
+
+# target to build an object file
+Task_2/src/string_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/string_utils.cpp.o
+.PHONY : Task_2/src/string_utils.cpp.o
+
+Task_2/src/string_utils.i: Task_2/src/string_utils.cpp.i
+.PHONY : Task_2/src/string_utils.i
+
+# target to preprocess a source file
+Task_2/src/string_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/string_utils.cpp.i
+.PHONY : Task_2/src/string_utils.cpp.i
+
+Task_2/src/string_utils.s: Task_2/src/string_utils.cpp.s
+.PHONY : Task_2/src/string_utils.s
+
+# target to generate assembly for a file
+Task_2/src/string_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/string_utils.cpp.s
+.PHONY : Task_2/src/string_utils.cpp.s
+
+Task_2/src/struct_input.o: Task_2/src/struct_input.cpp.o
+.PHONY : Task_2/src/struct_input.o
+
+# target to build an object file
+Task_2/src/struct_input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/struct_input.cpp.o
+.PHONY : Task_2/src/struct_input.cpp.o
+
+Task_2/src/struct_input.i: Task_2/src/struct_input.cpp.i
+.PHONY : Task_2/src/struct_input.i
+
+# target to preprocess a source file
+Task_2/src/struct_input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/struct_input.cpp.i
+.PHONY : Task_2/src/struct_input.cpp.i
+
+Task_2/src/struct_input.s: Task_2/src/struct_input.cpp.s
+.PHONY : Task_2/src/struct_input.s
+
+# target to generate assembly for a file
+Task_2/src/struct_input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/struct_input.cpp.s
+.PHONY : Task_2/src/struct_input.cpp.s
+
+Task_2/src/task2.o: Task_2/src/task2.cpp.o
+.PHONY : Task_2/src/task2.o
+
+# target to build an object file
+Task_2/src/task2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/task2.cpp.o
+.PHONY : Task_2/src/task2.cpp.o
+
+Task_2/src/task2.i: Task_2/src/task2.cpp.i
+.PHONY : Task_2/src/task2.i
+
+# target to preprocess a source file
+Task_2/src/task2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/task2.cpp.i
+.PHONY : Task_2/src/task2.cpp.i
+
+Task_2/src/task2.s: Task_2/src/task2.cpp.s
+.PHONY : Task_2/src/task2.s
+
+# target to generate assembly for a file
+Task_2/src/task2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Task_2/src/task2.cpp.s
+.PHONY : Task_2/src/task2.cpp.s
+
 general/src/funcs.o: general/src/funcs.cpp.o
 .PHONY : general/src/funcs.o
 
@@ -402,6 +594,30 @@ help:
 	@echo "... Task_1/src/task1.o"
 	@echo "... Task_1/src/task1.i"
 	@echo "... Task_1/src/task1.s"
+	@echo "... Task_2/src/array_utils.o"
+	@echo "... Task_2/src/array_utils.i"
+	@echo "... Task_2/src/array_utils.s"
+	@echo "... Task_2/src/file_utils.o"
+	@echo "... Task_2/src/file_utils.i"
+	@echo "... Task_2/src/file_utils.s"
+	@echo "... Task_2/src/logic.o"
+	@echo "... Task_2/src/logic.i"
+	@echo "... Task_2/src/logic.s"
+	@echo "... Task_2/src/output.o"
+	@echo "... Task_2/src/output.i"
+	@echo "... Task_2/src/output.s"
+	@echo "... Task_2/src/search_sort.o"
+	@echo "... Task_2/src/search_sort.i"
+	@echo "... Task_2/src/search_sort.s"
+	@echo "... Task_2/src/string_utils.o"
+	@echo "... Task_2/src/string_utils.i"
+	@echo "... Task_2/src/string_utils.s"
+	@echo "... Task_2/src/struct_input.o"
+	@echo "... Task_2/src/struct_input.i"
+	@echo "... Task_2/src/struct_input.s"
+	@echo "... Task_2/src/task2.o"
+	@echo "... Task_2/src/task2.i"
+	@echo "... Task_2/src/task2.s"
 	@echo "... general/src/funcs.o"
 	@echo "... general/src/funcs.i"
 	@echo "... general/src/funcs.s"

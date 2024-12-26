@@ -30,7 +30,7 @@ void saveDataBaseFromFile(Student* dataBase, const int &dataBaseSize, int startI
     out.close();
 }
 
-Student* loadDataBaseFromFile(int& dataBaseSize, const string& path){
+Student* loadDataBaseFromFileTask1(int& dataBaseSize, const string& path){
     ifstream in(path);
     if (!in){
         dataBaseSize = 0;

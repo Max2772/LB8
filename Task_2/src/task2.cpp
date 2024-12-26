@@ -1,47 +1,76 @@
 #include <iostream>
 
-#include "../header-files/funcs.h"
+#include "../header-files/task2.h"
+#include "../header-files/file_utils.h"
+#include "../header-files/output.h"
+#include "../header-files/struct_input.h"
+#include "../header-files/search_sort.h"
+#include "../header-files/array_utils.h"
 
 #include "../../general/header-files/funcs.h"
 #include "../../general/header-files/constants.h"
 
-using std::cout;
-using std::cin;
-using std::string;
 
+using namespace std;
 
 void task2(){
-        cout << "Введите 1-ое число в прямом коде: ";
-        string a = readStringForReverse();
-        while(a == INFSTRING)
-            a = readStringForReverse();
+    setlocale(LC_ALL, "");
+    cout << "\t\t|-----------------------------------------------------|\n"
+            "\t\t| База данных абитуриентов, поступающих в БГУИР(2024) |\n"
+            "\t\t|-----------------------------------------------------|\n";
 
-        cout << "Введите 2-ое число в прямом коде: ";
-        string b = readStringForReverse();
-        while(b == INFSTRING)
-            b = readStringForReverse();
+    
+    Student* dataBase = nullptr;
+    int dataBaseSize = 0;
+    dataBase = loadDataBaseFromFileTask2(dataBaseSize, "Task2.dat");
 
-        if(a[0] == '1')
-            reverseBitsInString(a);
-
-        if(b[0] == '1')
-            reverseBitsInString(b);
-
-        cout << "1-ое число в обратном коде: " << a << '\n';
-        cout << "2-ое число в обратном коде: " << b << '\n';
-
-        string res = sumBackwardsCode(a,b);
-        if(res == INFSTRING)
-            cout << "Переполнение! Невозможно проведение операциц!\n";
-        else{
-            cout << "Результат сложения в обратном коде: " << res << '\n';
-            cout << "Результат сложения в дополнительном коде: ";
-            if(res[0] == '0')
-                cout << res << '\n';
-            else{
-                res = reverseToAdditional(res);
-                cout << res << '\n';
-               }
+    while(true){
+        waitForInput();
+        printMenuTask2();
+        int choice = readIntegerInLine();
+        while(choice < 0 || choice > 6){
+            if(choice != -INF)
+                cout << "Некорректный ввод! Введите опцию из списка!\n";
+            choice = readIntegerInLine();
         }
+        switch(choice){
+            case 0:
+                if(dataBase != nullptr){
+                    delete [] dataBase;
+                    dataBase = nullptr;
+                    dataBaseSize = 0;
+                }
+                return;
 
+            case 1:
+                dataBase = inputStudents(dataBase, dataBaseSize);
+                break;
+
+            case 2:
+                if(dataBase == nullptr || dataBaseSize == 0){
+                    cout << "Список студентов пуст! Добавьте сначала студентов.\n";
+                }else{
+                    showList(dataBase, dataBaseSize);
+                    }
+                break;
+            case 3:
+                findInList(dataBase, dataBaseSize);
+                break;
+            case 4:
+                dataBase = editList(dataBase, dataBaseSize);
+                break;
+            case 5:
+                outputHigherMiddleUniversity(dataBase, dataBaseSize);
+                break;
+            case 6:
+                dataBase = autoInput(dataBase, dataBaseSize);
+                break;
+            
+        }
     }
+    if(dataBase != nullptr || dataBaseSize != 0){
+        delete [] dataBase;
+        dataBase = nullptr;
+    }
+    return;
+}

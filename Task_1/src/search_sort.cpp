@@ -8,15 +8,6 @@
 #include "../../general/header-files/constants.h"
 #include "../../general/header-files/funcs.h"
 
-
-bool findInArray(int* resIndexes, const int &size, const int &x){
-    for(int i = 0; i < size; ++i){
-        if(resIndexes[i] == x)
-            return true;
-    }
-    return false;
-}
-
 int findInListForIndex(Student *dataBase, const int &dataBaseSize){
     string name;
     cin.ignore();

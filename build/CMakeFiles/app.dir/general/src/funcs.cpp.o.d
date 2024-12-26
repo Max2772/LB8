@@ -149,6 +149,14 @@ CMakeFiles/app.dir/general/src/funcs.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h /usr/include/c++/13/ctime \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/codecvt \
+ /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/src/../../Task_1/header-files/task1.h \
+ /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/src/../../Task_2/header-files/task2.h \
  /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/src/../header-files/constants.h \
  /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/general/src/../header-files/funcs.h
