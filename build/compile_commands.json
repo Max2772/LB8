@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/main.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/main.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/main.cpp",
+  "output": "CMakeFiles/app.dir/main.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/array_utils.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/array_utils.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/array_utils.cpp",
+  "output": "CMakeFiles/app.dir/array_utils.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/input.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/input.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/input.cpp",
+  "output": "CMakeFiles/app.dir/input.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/logic.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/logic.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/logic.cpp",
+  "output": "CMakeFiles/app.dir/logic.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/output.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/output.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/output.cpp",
+  "output": "CMakeFiles/app.dir/output.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/search_sort.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/search_sort.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/search_sort.cpp",
+  "output": "CMakeFiles/app.dir/search_sort.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/string_utils.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/string_utils.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/string_utils.cpp",
+  "output": "CMakeFiles/app.dir/string_utils.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build",
+  "command": "/usr/bin/clang++-18    -pthread  -g -std=gnu++17 -o CMakeFiles/app.dir/struct_input.cpp.o -c /home/user/Documents/453502/ОАиП/LabWork_8/Task_1/struct_input.cpp",
+  "file": "/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/struct_input.cpp",
+  "output": "CMakeFiles/app.dir/struct_input.cpp.o"
+}
+]

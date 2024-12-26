@@ -13,11 +13,16 @@ void printMenu(){
         cout << "Ввод: ";
 }
 
+void boolOutput(bool statement){
+    cout << (statement ? "🗸" : "✘");
+}
+
 void showList(Student *dataBase, int size){
-    cout << '\n';
+    cout << "\n№ | ФИО | Номер группы | Средний балл | Доход на члена семьи | Льготы\n";
+    cout << "----------------------------------------------------------------------\n";
     for(int i = 0; i < size; ++i){
-        cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
-        " , доход на члена семьи " << dataBase[i].familyIncome << '\n';
+        cout << i+1 << ".  " << dataBase[i].FIO << ", " << dataBase[i].group << ", " << dataBase[i].averageMark <<
+                    ", " << dataBase[i].familyIncome.d << " руб, "; boolOutput(dataBase[i].lgoti); cout << "\n";
     }
     cout << '\n';
 }
@@ -26,10 +31,15 @@ void outputLessThanTwoIncome(Student *dataBase, int size, const int &minIncome){
     cout << "\nСтуденты с доходом на члена семьи меньше 2 минимальных зарплат(" << 2 * minIncome << " рублей):\n";
     bool found = false;
     for(int i = 0; i < size; ++i){
-        if(dataBase[i].familyIncome < 2 * minIncome){
-            cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
-            " , доход на члена семьи " << dataBase[i].familyIncome << '\n';
+        if(dataBase[i].familyIncome.d < 2 * minIncome && !found){
+           cout << "\n№ | ФИО | Номер группы | Средний балл | Доход на члена семьи | Льготы\n";
+           cout << "----------------------------------------------------------------------\n";
+           cout << i+1 << ".  " << dataBase[i].FIO << ", " << dataBase[i].group << ", " << dataBase[i].averageMark <<
+                    ", " << dataBase[i].familyIncome.d << " руб, "; boolOutput(dataBase[i].lgoti); cout << "\n";
             found = true;
+        }else if(dataBase[i].familyIncome.d < 2 * minIncome){
+            cout << i+1 << ".  " << dataBase[i].FIO << ", " << dataBase[i].group << ", " << dataBase[i].averageMark <<
+                ", " << dataBase[i].familyIncome.d << " руб, "; boolOutput(dataBase[i].lgoti); cout << "\n";   
         }
     }
     if(!found)

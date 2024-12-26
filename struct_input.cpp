@@ -75,12 +75,22 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
             }
 
             cout << "Введите доход на члена семьи " << i+1 << " студента: ";
-            dataBase[i].familyIncome = readDoubleInLine();
-            while(dataBase[i].familyIncome < 0){
-                if(dataBase[i].familyIncome != -INF)
+            dataBase[i].familyIncome.d = readDoubleInLine();
+            while(dataBase[i].familyIncome.d < 0){
+                if(dataBase[i].familyIncome.d != -INF)
                     cout << "Некорректный ввод! Введите вещественное число > 0: ";
-                dataBase[i].familyIncome = readDoubleInLine();
+                dataBase[i].familyIncome.d = readDoubleInLine();
             }
+            cout << "Есть ли льготы(y/n): ";
+            string buffer; cin >> buffer;
+            while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+                cout << "Введите только Y/y - да, N/n -нет: ";
+                cin >> buffer;
+            }
+            if(buffer[0] == 'Y' || buffer[0] == 'y')
+                dataBase[i].lgoti = true;
+            else
+                dataBase[i].lgoti = false;
         }
         dataBaseSize = N;
         return dataBase;
@@ -116,12 +126,23 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
             }
 
             cout << "Введите доход на члена семьи " << i+1 << " студента: ";
-            B.familyIncome = readDoubleInLine();
-            while(B.familyIncome < 0){
-                if(B.familyIncome != -INF)
+            B.familyIncome.d = readDoubleInLine();
+            while(B.familyIncome.d < 0){
+                if(B.familyIncome.d != -INF)
                     cout << "Некорректный ввод! Введите вещественное число > 0: ";
-                B.familyIncome = readDoubleInLine();
+                B.familyIncome.d = readDoubleInLine();
             }
+            cout << "Есть ли льготы(y/n): ";
+            string buffer; cin >> buffer;
+            while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+                cout << "Введите только Y/y - да, N/n -нет: ";
+                cin >> buffer;
+            }
+            if(buffer[0] == 'Y' || buffer[0] == 'y')
+                B.lgoti = true;
+            else
+                B.lgoti = false;
+
             dataBase = addElement(dataBase, dataBaseSize, B);
             i++;
         }
@@ -161,12 +182,24 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                     }
 
                     cout << "Введите доход на члена семьи студента: ";
-                    B.familyIncome = readDoubleInLine();
-                    while(B.familyIncome < 0){
-                        if(B.familyIncome != -INF)
+                    B.familyIncome.d = readDoubleInLine();
+                    while(B.familyIncome.d < 0){
+                        if(B.familyIncome.d != -INF)
                             cout << "Некорректный ввод! Введите вещественное число > 0: ";
-                        B.familyIncome = readDoubleInLine();
+                        B.familyIncome.d = readDoubleInLine();
                     }
+
+                    cout << "Есть ли льготы(y/n): ";
+                    string buffer; cin >> buffer;
+                    while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+                        cout << "Введите только Y/y - да, N/n -нет: ";
+                        cin >> buffer;
+                    }
+                    if(buffer[0] == 'Y' || buffer[0] == 'y')
+                        B.lgoti = true;
+                    else
+                        B.lgoti = false;
+
                     dataBase = addElement(dataBase, dataBaseSize, B);
                 }else if(dataBaseSize == 0){
                     delete [] dataBase;

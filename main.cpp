@@ -1,6 +1,17 @@
 #include <iostream>
 #include "head.h"
 
+//
+#include "input.cpp"
+#include "array_utils.cpp"
+#include "logic.cpp"
+#include "output.cpp"
+#include "search_sort.cpp"
+#include "string_utils.cpp"
+#include "struct_input.cpp"
+
+//
+
 using namespace std;
 
 int main(){
@@ -14,9 +25,24 @@ int main(){
         minIncome = readDoubleInLine();
     }
 
-    Student* dataBase = nullptr;
-    int dataBaseSize = 0; 
+/*
+    Student* dataBase = new Student[10] {
+    {"Иванов Иван Сергеевич", 101, 4.5, 50000.75, true},
+    {"Петрова Мария Алексеевна", 102, 3.8, 35000, false},
+    {"Сидоров Алексей Викторович", 101, 4.2, 45000.5, true},
+    {"Смирнова Ольга Дмитриевна", 103, 3.9, 40000, false},
+    {"Фролов Сергей Владимирович", 102, 4.8, 52000.1, true},
+    {"Иванова Анна Андреевна", 104, 4.1, 30000, false},
+    {"Попов Дмитрий Олегович", 101, 3.7, 47000.3, true},
+    {"Орлова Наталья Петровна", 103, 4.6, 38000, false},
+    {"Козлов Игорь Александрович", 104, 4.4, 55000.9, true},
+    {"Лебедева Елена Сергеевна", 102, 3.5, 32000, false}
+};
+    int dataBaseSize = 10; 
+*/
 
+    Student* dataBase = nullptr;
+    int dataBaseSize = 0;
     while(true){
         waitForInput();
         printMenu();
@@ -36,6 +62,7 @@ int main(){
                 return 0;
 
             case 1:
+
                 dataBase = inputStudents(dataBase, dataBaseSize);
                 removeWhiteSpacesFromList(dataBase, dataBaseSize);
                 break;

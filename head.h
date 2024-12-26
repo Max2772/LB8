@@ -2,11 +2,15 @@
 
 using namespace std;
 
-typedef struct{
+typedef struct Student{
     string FIO;
     int group;
     double averageMark;
-    double familyIncome;
+    union{
+    double d;
+    int i;
+    } familyIncome;
+    bool lgoti;
 } Student;
 
 
@@ -31,3 +35,4 @@ void swapStruct(Student &a, Student &b);
 void sortByMinIncome(Student *a, const int &dataBasesize);
 void waitForInput();
 Student* inputStudents(Student *dataBase, int &dataBaseSize);
+void boolOutput(bool statement);

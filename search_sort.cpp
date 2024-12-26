@@ -79,7 +79,7 @@ void findInList(Student *dataBase, const int &dataBaseSize){
         if(lowerFIO.find(buffer) != string::npos){
             elementFound = true;
             cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
-            " , доход на члена семьи " << dataBase[i].familyIncome << '\n';
+            " , доход на члена семьи " << dataBase[i].familyIncome.d << " руб, "; boolOutput(dataBase[i].lgoti);
         }
     }
 
@@ -105,7 +105,7 @@ void sortByMinIncome(Student *a, const int &dataBasesize){
         for(int i = 0; i < dataBasesize; ++i){
             int min = i;
             for(int j = i + 1; j < dataBasesize; ++j){
-                if(a[j].familyIncome < a[min].familyIncome)
+                if(a[j].familyIncome.d < a[min].familyIncome.d)
                     min = j;
             }
             if(min != i)
