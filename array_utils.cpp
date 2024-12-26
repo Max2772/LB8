@@ -27,6 +27,7 @@ Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
 
     delete [] dataBase;
     dataBaseSize--;
+    saveDataBaseFromFile(b, dataBaseSize, 0);
     return b;
 }
 
@@ -121,7 +122,8 @@ Student* editList(Student *dataBase, int &dataBaseSize){
             B.lgoti = false;
 
         dataBase = addElement(dataBase, dataBaseSize, B);
-        removeWhiteSpacesFromList(dataBase, dataBaseSize);
+        removeWhiteSpacesFromFIO(dataBase, dataBaseSize-1);
+        saveDataBaseFromFile(dataBase, dataBaseSize, dataBaseSize-1);
         return dataBase;
     }else if(buffer == "-"){
         cout << "Введите ФИО студента для удаления из списка: ";
@@ -135,7 +137,8 @@ Student* editList(Student *dataBase, int &dataBaseSize){
         int index = findInListForIndex(dataBase, dataBaseSize);
         if(index != -INF){
             editElement(dataBase, index);
-            removeWhiteSpacesFromList(dataBase, dataBaseSize);
+            removeWhiteSpacesFromFIO(dataBase, index);
+            saveDataBaseFromFile(dataBase, dataBaseSize, index);
         }
         return dataBase;
     }

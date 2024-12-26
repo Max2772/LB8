@@ -111,5 +111,6 @@ void sortByMinIncome(Student *a, const int &dataBasesize){
             if(min != i)
                 swapStruct(a[i], a[min]);
         }
+        saveDataBaseFromFile(a, dataBasesize, 0);
     }
 }

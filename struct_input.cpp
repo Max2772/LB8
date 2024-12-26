@@ -30,7 +30,7 @@ Student* autoInput(Student *dataBase, int &dataBaseSize){
         {"Лебедева Елена Сергеевна", 102, 3.5, 32000, false}
     };
         dataBaseSize = 10;
-        saveDataBaseFromFile(dataBase, dataBaseSize, 0);
+        saveDataBaseFromFile(newDataBase, dataBaseSize, 0);
     return newDataBase;
 }
 
@@ -125,7 +125,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
             
                 dataBase[i].lgoti = false;
 
-            removeWhiteSpaceFromFIO(dataBase, i); // Необязательная фича, она просто удаляет лишние символы после ФИО
+            removeWhiteSpacesFromFIO(dataBase, i); // Необязательная фича, она просто удаляет лишние символы после ФИО
             dataBaseSize++;
             saveDataBaseFromFile(dataBase, dataBaseSize, i);
         }
@@ -180,7 +180,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                 B.lgoti = false;
 
             dataBase = addElement(dataBase, dataBaseSize, B);
-            removeWhiteSpaceFromFIO(dataBase, i); 
+            removeWhiteSpacesFromFIO(dataBase, i); 
             saveDataBaseFromFile(dataBase, dataBaseSize, i);
             i++;
         }
@@ -239,7 +239,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                         B.lgoti = false;
 
                     dataBase = addElement(dataBase, dataBaseSize, B);
-                    removeWhiteSpaceFromFIO(dataBase, dataBaseSize-1); 
+                    removeWhiteSpacesFromFIO(dataBase, dataBaseSize-1); 
                     saveDataBaseFromFile(dataBase, dataBaseSize, dataBaseSize-1);
                 }else if(dataBaseSize == 0){
                     delete [] dataBase;

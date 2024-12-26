@@ -39,4 +39,4 @@ void boolOutput(bool statement);
 
 void saveDataBaseFromFile(Student* dataBase, const int &dataBaseSize, int startIdx, const string& path = "Task1.dat");
 Student* loadDataBaseFromFile(int& dataBaseSize, const string& path);
-void removeWhiteSpaceFromFIO(Student* dataBase, const int &idx);
+void removeWhiteSpacesFromFIO(Student* dataBase, const int &idx);

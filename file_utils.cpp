@@ -57,4 +57,3 @@ Student* loadDataBaseFromFile(int& dataBaseSize, const string& path){
     in.close();
     return dataBase;
 }
-

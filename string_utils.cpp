@@ -36,7 +36,7 @@ void removeWhiteSpacesFromList(Student *dataBase, const int &dataBaseSize){
     }
 }
 
-void removeWhiteSpaceFromFIO(Student* dataBase, const int &idx){
+void removeWhiteSpacesFromFIO(Student* dataBase, const int &idx){
     string str = dataBase[idx].FIO;
     if(str[str.length() - 1] == ' ' || str[str.length() - 1] == '\t'){
     int j = str.length() - 1;
