@@ -35,3 +35,15 @@ void removeWhiteSpacesFromList(Student *dataBase, const int &dataBaseSize){
         }
     }
 }
+
+void removeWhiteSpaceFromFIO(Student* dataBase, const int &idx){
+    string str = dataBase[idx].FIO;
+    if(str[str.length() - 1] == ' ' || str[str.length() - 1] == '\t'){
+    int j = str.length() - 1;
+    while(str[j] == ' ' || str[j] == '\t'){
+        j--;
+    }
+    str = newStringInInterval(str, j+1);
+    dataBase[idx].FIO = str;
+    }
+}

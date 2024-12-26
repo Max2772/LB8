@@ -2,6 +2,38 @@
 #include "head.h"
 
 
+Student* autoInput(Student *dataBase, int &dataBaseSize){
+        if(dataBaseSize != 0 || dataBase != nullptr){
+        cout << "Вы уверены, что хотите перзаписать старый список стандартной таблицой для отладки?(y/n): ";
+        string buffer; cin >> buffer;
+        while(buffer != "Y" && buffer != "y" && buffer != "N" && buffer != "n"){
+            cout << "Введите только Y/y - да, N/n -нет: ";
+            cin >> buffer;
+        }
+        if(buffer == "N" || buffer == "n"){
+            return dataBase;
+        }
+            delete [] dataBase;
+            dataBase = nullptr;
+            dataBaseSize = 0;
+        }
+        Student* newDataBase = new Student[10]{
+        {"Иванов Иван Сергеевич", 101, 4.5, 50000.75, true},
+        {"Петрова Мария Алексеевна", 102, 3.8, 35000, false},
+        {"Сидоров Алексей Викторович", 101, 4.2, 45000.5, true},
+        {"Смирнова Ольга Дмитриевна", 103, 3.9, 40000, false},
+        {"Фролов Сергей Владимирович", 102, 4.8, 52000.1, true},
+        {"Иванова Анна Андреевна", 104, 4.1, 30000, false},
+        {"Попов Дмитрий Олегович", 101, 3.7, 47000.3, true},
+        {"Орлова Наталья Петровна", 103, 4.6, 38000, false},
+        {"Козлов Игорь Александрович", 104, 4.4, 55000.9, true},
+        {"Лебедева Елена Сергеевна", 102, 3.5, 32000, false}
+    };
+        dataBaseSize = 10;
+        saveDataBaseFromFile(dataBase, dataBaseSize, 0);
+    return newDataBase;
+}
+
 Student* inputStudents(Student *dataBase, int &dataBaseSize){
     if(dataBaseSize != 0){
         cout << "Вы уверены, что хотите перезаписать старый список?(y/n): ";
@@ -90,9 +122,13 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
             if(buffer[0] == 'Y' || buffer[0] == 'y')
                 dataBase[i].lgoti = true;
             else
+            
                 dataBase[i].lgoti = false;
+
+            removeWhiteSpaceFromFIO(dataBase, i); // Необязательная фича, она просто удаляет лишние символы после ФИО
+            dataBaseSize++;
+            saveDataBaseFromFile(dataBase, dataBaseSize, i);
         }
-        dataBaseSize = N;
         return dataBase;
     }else if(choice == 2){
         int i = 0;
@@ -144,6 +180,8 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                 B.lgoti = false;
 
             dataBase = addElement(dataBase, dataBaseSize, B);
+            removeWhiteSpaceFromFIO(dataBase, i); 
+            saveDataBaseFromFile(dataBase, dataBaseSize, i);
             i++;
         }
     }else{
@@ -201,6 +239,8 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                         B.lgoti = false;
 
                     dataBase = addElement(dataBase, dataBaseSize, B);
+                    removeWhiteSpaceFromFIO(dataBase, dataBaseSize-1); 
+                    saveDataBaseFromFile(dataBase, dataBaseSize, dataBaseSize-1);
                 }else if(dataBaseSize == 0){
                     delete [] dataBase;
                     dataBase = nullptr;
