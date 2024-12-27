@@ -1,3 +1,0 @@
-/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build/CMakeFiles/app.dir
-/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build/CMakeFiles/edit_cache.dir
-/home/user/Documents/453502/ОАиП/LabWork_8/Task_1/build/CMakeFiles/rebuild_cache.dir

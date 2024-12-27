@@ -1,1 +1,0 @@
-/usr/bin/clang++-18  -pthread  -g CMakeFiles/app.dir/main.cpp.o CMakeFiles/app.dir/array_utils.cpp.o CMakeFiles/app.dir/input.cpp.o CMakeFiles/app.dir/logic.cpp.o CMakeFiles/app.dir/output.cpp.o CMakeFiles/app.dir/search_sort.cpp.o CMakeFiles/app.dir/string_utils.cpp.o CMakeFiles/app.dir/struct_input.cpp.o -o app  -lpthread 

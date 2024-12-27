@@ -23,7 +23,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SANITIZER_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZER_FLAGS}")
 
 set(SRCS
-    main.cpp
+    task1.cpp
+    file_utils.cpp
     array_utils.cpp
     input.cpp
     logic.cpp
