@@ -14,13 +14,13 @@
 using namespace std;
 
 void task2(){
-    setlocale(LC_ALL, "");
-    cout << "\t\t|-----------------------------------------------------|\n"
-            "\t\t| База данных абитуриентов, поступающих в БГУИР(2024) |\n"
-            "\t\t|-----------------------------------------------------|\n";
-
+     setlocale(LC_ALL, "");
+    cout << "\t\t\t\t|-----------------------------------------------------|\n"
+            "\t\t\t\t| База данных абитуриентов, поступающих в БГУИР(2024) |\n"
+            "\t\t\t\t|-----------------------------------------------------|\n\n\n";
+    cin.putback('\n');
     
-    Student* dataBase = nullptr;
+    Student2* dataBase = nullptr;
     int dataBaseSize = 0;
     dataBase = loadDataBaseFromFileTask2(dataBaseSize, "Task2.dat");
 
@@ -43,7 +43,7 @@ void task2(){
                 return;
 
             case 1:
-                dataBase = inputStudents(dataBase, dataBaseSize);
+                dataBase = inputStudents2(dataBase, dataBaseSize);
                 break;
 
             case 2:

@@ -1,5 +1,4 @@
 #include <iostream>
-#define Student Student2
 
 #include "../header-files/task2.h"
 #include "../header-files/logic.h"
@@ -19,7 +18,7 @@ void printMenuTask2(){
         cout << "Ввод: ";
 }
 
-void showList(Student *dataBase, int size){
+void showList(Student2 *dataBase, int size){
     cout << "\n№ | ФИО | Математика | Язык | Физика | Аттестат | Средний\n";
     cout << "------------------------------------------------------------\n";
     for(int i = 0; i < size; ++i){
@@ -30,7 +29,7 @@ void showList(Student *dataBase, int size){
 }
 
 
-void outputHigherMiddleUniversity(Student *dataBase, const int &dataBaseSize){
+void outputHigherMiddleUniversity(Student2 *dataBase, const int &dataBaseSize){
     double middleUniversity = getMiddleForList(dataBase, dataBaseSize);
     cout << "\nСтуденты с средним баллом выше среднего по университету(" << middleUniversity << " баллов):\n";
     bool found = false;

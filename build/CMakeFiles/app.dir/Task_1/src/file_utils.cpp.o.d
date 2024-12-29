@@ -176,6 +176,6 @@ CMakeFiles/app.dir/Task_1/src/file_utils.cpp.o: \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
  /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_1/src/../header-files/task1.h \
+ /usr/include/c++/13/iostream \
  /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_1/src/../../general/header-files/constants.h \
- /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_1/src/../../general/header-files/funcs.h \
- /usr/include/c++/13/iostream
+ /home/user/Documents/453502/ОАиП/LabWork_8/TaskALL/Task_1/src/../../general/header-files/funcs.h

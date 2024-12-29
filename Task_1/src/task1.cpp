@@ -27,7 +27,7 @@ void task1(){
     
     Student* dataBase = nullptr;
     int dataBaseSize = 0;
-    dataBase = loadDataBaseFromFileTask1(dataBaseSize, "Task1.dat");
+    dataBase = loadDataBaseFromBinary(dataBaseSize);
 
     while(true){
         waitForInput();

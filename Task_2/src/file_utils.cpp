@@ -1,6 +1,5 @@
 #include <fstream>
 #include <filesystem>
-#define Student Student2
 
 #include "../header-files/task2.h"
 
@@ -9,7 +8,7 @@
 
 using namespace std;
 
-void saveDataBaseFromFile(Student* dataBase, const int &dataBaseSize, int startIdx, const string& path){
+void saveDataBaseFromFile(Student2* dataBase, const int &dataBaseSize, int startIdx, const string& path){
     ofstream out;
 
     if(startIdx == 0)
@@ -32,7 +31,7 @@ void saveDataBaseFromFile(Student* dataBase, const int &dataBaseSize, int startI
     out.close();
 }
 
-Student* loadDataBaseFromFileTask2(int& dataBaseSize, const string& path){
+Student2* loadDataBaseFromFileTask2(int& dataBaseSize, const string& path){
     ifstream in(path);
     if (!in){
         dataBaseSize = 0;
@@ -47,9 +46,9 @@ Student* loadDataBaseFromFileTask2(int& dataBaseSize, const string& path){
     in.clear();
     in.seekg(0, ios::beg);
 
-    dataBaseSize = count / 5;
+    dataBaseSize = count / 6;
 
-    Student* dataBase = new Student[dataBaseSize];
+    Student2* dataBase = new Student2[dataBaseSize];
 
     for(int i = 0; i < dataBaseSize; ++i){
         getline(in, dataBase[i].FIO);

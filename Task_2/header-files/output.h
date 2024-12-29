@@ -1,8 +1,7 @@
 #pragma once
 #include "task2.h"
-#define Student Student2
 
 
 void printMenuTask2();
-void showList(Student *dataBase, int size);
-void outputHigherMiddleUniversity(Student *dataBase, const int &dataBaseSize);
+void showList(Student2 *dataBase, int size);
+void outputHigherMiddleUniversity(Student2 *dataBase, const int &dataBaseSize);

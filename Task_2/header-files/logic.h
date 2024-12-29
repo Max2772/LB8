@@ -1,5 +1,5 @@
 #pragma once
-#define Student Student2
+#include "task2.h"
 
-double getMiddle(const Student B);
-double getMiddleForList(const Student *dataBase, const int &dataBaseSize);
+double getMiddle(const Student2 B);
+double getMiddleForList(const Student2 *dataBase, const int &dataBaseSize);

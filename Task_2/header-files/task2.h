@@ -1,7 +1,7 @@
 #pragma once
-#define Student Student2
+#include <iostream>
 
-typedef struct Student{
+typedef struct Student2{
     std::string FIO;
     double mark1;
     double mark2;
@@ -11,7 +11,7 @@ typedef struct Student{
     int i;
     } mark4;
     double middleMark;
-} Student;
+} Student2;
 
 void task2();
 

@@ -1,8 +1,5 @@
 #pragma once
 #include "task2.h"
-#define Student Student2
 
-using namespace std;
-
-void removeWhiteSpacesFromList(Student *dataBase, const int &dataBaseSize);
-void removeWhiteSpacesFromFIO(Student* dataBase, const int &idx);
+void removeWhiteSpacesFromList(Student2 *dataBase, const int &dataBaseSize);
+void removeWhiteSpacesFromFIO(Student2* dataBase, const int &idx);

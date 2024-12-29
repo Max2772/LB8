@@ -1,5 +1,4 @@
 #include <iostream>
-#define Student Student2
 
 #include "../header-files/task2.h"
 #include "../header-files/file_utils.h"
@@ -11,7 +10,7 @@
 #include "../../general/header-files/funcs.h"
 
 
-Student* autoInput(Student *dataBase, int &dataBaseSize){
+Student2* autoInput(Student2 *dataBase, int &dataBaseSize){
         if(dataBaseSize != 0 || dataBase != nullptr){
         cout << "Вы уверены, что хотите перзаписать старый список стандартной таблицой для отладки?(y/n): ";
         string buffer; cin >> buffer;
@@ -26,7 +25,7 @@ Student* autoInput(Student *dataBase, int &dataBaseSize){
             dataBase = nullptr;
             dataBaseSize = 0;
         }
-        Student* newDataBase = new Student[10]{
+        Student2* newDataBase = new Student2[10]{
         {"Иванов Иван Сергеевич", 4.5, 4.7, 4.8, {4.6}, 4.65},
         {"Петрова Мария Алексеевна", 3.8, 4.0, 3.7, {3.9}, 3.85},
         {"Сидоров Алексей Викторович", 4.2, 4.4, 4.3, {4.5}, 4.35},
@@ -43,7 +42,7 @@ Student* autoInput(Student *dataBase, int &dataBaseSize){
     return newDataBase;
 }
 
-Student* inputStudents(Student *dataBase, int &dataBaseSize){
+Student2* inputStudents2(Student2 *dataBase, int &dataBaseSize){
     if(dataBaseSize != 0){
         cout << "Вы уверены, что хотите перезаписать старый список?(y/n): ";
         string buffer; cin >> buffer;
@@ -79,7 +78,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
             N = readIntegerInLine();
         }
 
-        Student *dataBase = new Student[N];
+        Student2 *dataBase = new Student2[N];
 
         for(int i = 0; i < N; ++i){
             cout << "Введите ФИО " << i+1 << " студента: ";
@@ -127,7 +126,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
     }else if(choice == 2){
         int i = 0;
         while(true){
-            Student B;
+            Student2 B;
             cout << "Введите ФИО " << i+1 << " студента: ";
             cin.ignore();
             getline(cin, B.FIO);
@@ -177,7 +176,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
         }
     }else{
         dataBaseSize = 0;
-        Student *dataBase = nullptr;
+        Student2 *dataBase = nullptr;
         while(true){
             cout << "Хотите ли вы добавить студента?(Y/N)";
             string buffer; cin >> buffer;
@@ -186,7 +185,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
                 cin >> buffer;
             }
                 if(buffer[0] == 'Y' || buffer[0] == 'y'){
-                    Student B;
+                    Student2 B;
                     cout << "Введите ФИО студента: ";
                     cin.ignore();
                     getline(cin, B.FIO);

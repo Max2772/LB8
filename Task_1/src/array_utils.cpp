@@ -35,14 +35,14 @@ Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
 
     delete [] dataBase;
     dataBaseSize--;
-    saveDataBaseFromFile(b, dataBaseSize, 0);
+    saveDataBaseToBinary(b, dataBaseSize, 0);
     return b;
 }
 
 void editElement(Student *dataBase, int idx){
-    cout << dataBase[idx].FIO << ", группа " << dataBase[idx].group << " , средний балл: " << dataBase[idx].averageMark <<
-                " , доход на члена семьи " << dataBase[idx].familyIncome.d << " руб, "; boolOutput(dataBase[idx].lgoti);
-            cout << "Перепишите новые данные студента:\n";
+    cout << dataBase[idx].FIO << ", группа " << dataBase[idx].group << ", средний балл: " << dataBase[idx].averageMark <<
+                ", доход на члена семьи " << dataBase[idx].familyIncome.d << " руб, "; boolOutput(dataBase[idx].lgoti);
+            cout << "\nПерепишите новые данные студента:\n";
 
             Student B;
             cout << "Введите новое ФИО студента: ";
@@ -131,7 +131,7 @@ Student* editList(Student *dataBase, int &dataBaseSize){
 
         dataBase = addElement(dataBase, dataBaseSize, B);
         removeWhiteSpacesFromFIO(dataBase, dataBaseSize-1);
-        saveDataBaseFromFile(dataBase, dataBaseSize, dataBaseSize-1);
+        saveDataBaseToBinary(dataBase, dataBaseSize, dataBaseSize-1);
         return dataBase;
     }else if(buffer == "-"){
         cout << "Введите ФИО студента для удаления из списка: ";
@@ -146,7 +146,7 @@ Student* editList(Student *dataBase, int &dataBaseSize){
         if(index != -INF){
             editElement(dataBase, index);
             removeWhiteSpacesFromFIO(dataBase, index);
-            saveDataBaseFromFile(dataBase, dataBaseSize, index);
+            saveDataBaseToBinary(dataBase, dataBaseSize, index);
         }
         return dataBase;
     }

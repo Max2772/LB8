@@ -1,6 +1,7 @@
 #pragma once
+#include <iostream>
 
-typedef struct Student1{
+typedef struct Student{
     std::string FIO;
     int group;
     double averageMark;

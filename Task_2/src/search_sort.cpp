@@ -1,5 +1,4 @@
 #include <iostream>
-#define Student Student2
 
 #include "../header-files/task2.h"
 #include "../header-files/string_utils.h"
@@ -9,7 +8,7 @@
 #include "../../general/header-files/constants.h"
 #include "../../general/header-files/funcs.h"
 
-int findInListForIndex(Student *dataBase, const int &dataBaseSize){
+int findInListForIndex(Student2 *dataBase, const int &dataBaseSize){
     string name;
     cin.ignore();
     getline(cin, name);
@@ -64,7 +63,7 @@ int findInListForIndex(Student *dataBase, const int &dataBaseSize){
     }
 }
 
-void findInList(Student *dataBase, const int &dataBaseSize){
+void findInList(Student2 *dataBase, const int &dataBaseSize){
     cout << "\nВведите ФИО студента: ";
     string buffer;
     cin.ignore();
@@ -75,8 +74,13 @@ void findInList(Student *dataBase, const int &dataBaseSize){
     for(int i = 0; i < dataBaseSize; ++i){
         string lowerFIO = dataBase[i].FIO;
         lowerFIO = russianStringToLower(lowerFIO);
-        if(lowerFIO.find(buffer) != string::npos){
+        if(lowerFIO.find(buffer) != string::npos && !elementFound){
             elementFound = true;
+            cout << "\n№ | ФИО | Математика | Язык | Физика | Аттестат | Средний\n";
+            cout << "------------------------------------------------------------\n";
+            cout << i+1 << ".  " << dataBase[i].FIO << ", " << dataBase[i].mark1 << ", " << dataBase[i].mark2 <<
+            ", " << dataBase[i].mark3 << ", " << dataBase[i].mark4.d << ", " << dataBase[i].middleMark << '\n';
+        }else if(lowerFIO.find(buffer) != string::npos && elementFound){
             cout << i+1 << ".  " << dataBase[i].FIO << ", " << dataBase[i].mark1 << ", " << dataBase[i].mark2 <<
             ", " << dataBase[i].mark3 << ", " << dataBase[i].mark4.d << ", " << dataBase[i].middleMark << '\n';
         }

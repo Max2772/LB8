@@ -1,5 +1,4 @@
 #include <iostream>
-#define Student Student2
 
 #include "../header-files/task2.h"
 #include "../header-files/file_utils.h"
@@ -11,8 +10,8 @@
 #include "../../general/header-files/funcs.h"
 #include "../../general/header-files/constants.h"
 
-Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
-    Student *b = new Student[dataBaseSize + 1];
+Student2* addElement(Student2 *dataBase, int &dataBaseSize, const Student2 &x){
+    Student2 *b = new Student2[dataBaseSize + 1];
     for(int i = 0; i < dataBaseSize; ++i){
         b[i] = dataBase[i];
     }
@@ -24,8 +23,8 @@ Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x){
     return b;
 }
 
-Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
-    Student *b = new Student[dataBaseSize - 1];
+Student2* deleteElement(Student2 *dataBase, int &dataBaseSize, const int &index){
+    Student2 *b = new Student2[dataBaseSize - 1];
     int i = 0, j = 0;
     for(;i != index && i < dataBaseSize; ++i, ++j){
         b[j] = dataBase[i];
@@ -41,12 +40,12 @@ Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
     return b;
 }
 
-void editElement(Student *dataBase, int idx){
+void editElement(Student2 *dataBase, int idx){
     cout << dataBase[idx].FIO << ", " << dataBase[idx].mark1 << ", " << dataBase[idx].mark2 <<
     ", " << dataBase[idx].mark3 << ", " << dataBase[idx].mark4.d << ", " << dataBase[idx].middleMark << '\n';
     cout << "Перепишите новые данные студента:\n";
 
-    Student B;
+    Student2 B;
     cout << "Введите новое ФИО студента: ";
     cin.ignore();
     getline(cin, B.FIO);
@@ -89,7 +88,7 @@ void editElement(Student *dataBase, int idx){
 }
 
 
-Student* editList(Student *dataBase, int &dataBaseSize){
+Student2* editList(Student2 *dataBase, int &dataBaseSize){
     cout << "Введите + для добавления, - для удаления студента, * - для редактирования информации студента(+/-/*): ";
     string buffer; cin >> buffer;
     while(buffer != "+" && buffer != "-" && buffer != "*"){
@@ -97,7 +96,7 @@ Student* editList(Student *dataBase, int &dataBaseSize){
         cin >> buffer;
     }
     if(buffer == "+"){
-        Student B;
+        Student2 B;
         cout << "Введите ФИО новго студента: ";
         cin.ignore();
         getline(cin, B.FIO);

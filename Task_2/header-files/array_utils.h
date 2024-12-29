@@ -1,9 +1,8 @@
 #pragma once
 #include "task2.h"
-#define Student Student2
 
 using namespace std;
-Student* addElement(Student *dataBase, int &dataBaseSize, const Student &x);
-Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index);
-void editElement(Student *dataBase, int idx);
-Student* editList(Student *dataBase, int &dataBaseSize);
+Student2* addElement(Student2 *dataBase, int &dataBaseSize, const Student2 &x);
+Student2* deleteElement(Student2 *dataBase, int &dataBaseSize, const int &index);
+void editElement(Student2 *dataBase, int idx);
+Student2* editList(Student2 *dataBase, int &dataBaseSize);

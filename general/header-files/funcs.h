@@ -7,7 +7,7 @@ using namespace std;
 int readCharToStringForType(char* input);
 int readCharToStringForChoice(char* input);
 string newStringInInterval(const string &str, const int & end);
-string russianStringToLower(const string &str);\
+string russianStringToLower(const string &str);
 
 inline bool findInArray(int* resIndexes, const int &size, const int &x){
     for(int i = 0; i < size; ++i){

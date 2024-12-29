@@ -1,6 +1,5 @@
 #pragma once
 #include "task2.h"
-#define Student Student2
 
-Student* autoInput(Student *dataBase, int &dataBaseSize);
-Student* inputStudents(Student *dataBase, int &dataBaseSize);
+Student2* autoInput(Student2 *dataBase, int &dataBaseSize);
+Student2* inputStudents2(Student2 *dataBase, int &dataBaseSize);
