@@ -30,7 +30,7 @@ Student* autoInput(Student *dataBase, int &dataBaseSize){
         {"Лебедева Елена Сергеевна", 102, 3.5, 32000, false}
     };
         dataBaseSize = 10;
-        saveDataBaseFromFile(newDataBase, dataBaseSize, 0);
+        saveDataBaseToBinary(newDataBase, dataBaseSize, 0);
     return newDataBase;
 }
 
@@ -127,7 +127,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
 
             removeWhiteSpacesFromFIO(dataBase, i); // Необязательная фича, она просто удаляет лишние символы после ФИО
             dataBaseSize++;
-            saveDataBaseFromFile(dataBase, dataBaseSize, i);
+            saveDataBaseToBinary(dataBase, dataBaseSize, i);
         }
         return dataBase;
     }else if(choice == 2){
@@ -181,7 +181,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
 
             dataBase = addElement(dataBase, dataBaseSize, B);
             removeWhiteSpacesFromFIO(dataBase, i); 
-            saveDataBaseFromFile(dataBase, dataBaseSize, i);
+            saveDataBaseToBinary(dataBase, dataBaseSize, i);
             i++;
         }
     }else{
@@ -240,7 +240,7 @@ Student* inputStudents(Student *dataBase, int &dataBaseSize){
 
                     dataBase = addElement(dataBase, dataBaseSize, B);
                     removeWhiteSpacesFromFIO(dataBase, dataBaseSize-1); 
-                    saveDataBaseFromFile(dataBase, dataBaseSize, dataBaseSize-1);
+                    saveDataBaseToBinary(dataBase, dataBaseSize, dataBaseSize-1);
                 }else if(dataBaseSize == 0){
                     delete [] dataBase;
                     dataBase = nullptr;

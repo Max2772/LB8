@@ -38,6 +38,6 @@ Student* autoInput(Student *dataBase, int &dataBaseSize);
 Student* inputStudents(Student *dataBase, int &dataBaseSize);
 void boolOutput(bool statement);
 
-void saveDataBaseFromFile(Student* dataBase, const int &dataBaseSize, int startIdx, const string& path = "Task1.dat");
-Student* loadDataBaseFromFile(int& dataBaseSize, const string& path);
+void saveDataBaseToBinary(Student* dataBase, const int& dataBaseSize, int startIdx, const string& path = "Task1.dat");
+Student* loadDataBaseFromBinary(int& dataBaseSize, const string& path = "Task1.dat");
 void removeWhiteSpacesFromFIO(Student* dataBase, const int &idx);

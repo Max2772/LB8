@@ -1,7 +1,7 @@
 #include <iostream>
 #include "head.h"
 
-/*                                If you want to run and debug in IDE uncomment this
+/*                               If you want to run and debug in IDE uncomment this
 #include "input.cpp"
 #include "array_utils.cpp"
 #include "logic.cpp"
@@ -29,7 +29,7 @@ int main(){
     
     Student* dataBase = nullptr;
     int dataBaseSize = 0;
-    dataBase = loadDataBaseFromFile(dataBaseSize, "Task1.dat");
+    dataBase = loadDataBaseFromBinary(dataBaseSize);
 
     while(true){
         waitForInput();
