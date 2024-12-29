@@ -34,6 +34,7 @@ void showList(Student *dataBase, int size);
 void swapStruct(Student &a, Student &b);
 void sortByMinIncome(Student *a, const int &dataBasesize);
 void waitForInput();
+Student* autoInput(Student *dataBase, int &dataBaseSize);
 Student* inputStudents(Student *dataBase, int &dataBaseSize);
 void boolOutput(bool statement);
 

@@ -32,9 +32,9 @@ Student* deleteElement(Student *dataBase, int &dataBaseSize, const int &index){
 }
 
 void editElement(Student *dataBase, int idx){
-    cout << dataBase[idx].FIO << ", группа " << dataBase[idx].group << " , средний балл: " << dataBase[idx].averageMark <<
-                " , доход на члена семьи " << dataBase[idx].familyIncome.d << " руб, "; boolOutput(dataBase[idx].lgoti);
-            cout << "Перепишите новые данные студента:\n";
+    cout << dataBase[idx].FIO << ", группа " << dataBase[idx].group << ", средний балл: " << dataBase[idx].averageMark <<
+                ", доход на члена семьи " << dataBase[idx].familyIncome.d << " руб, "; boolOutput(dataBase[idx].lgoti);
+            cout << "\nПерепишите новые данные студента:\n";
 
             Student B;
             cout << "Введите новое ФИО студента: ";

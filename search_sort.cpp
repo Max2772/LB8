@@ -76,10 +76,14 @@ void findInList(Student *dataBase, const int &dataBaseSize){
     for(int i = 0; i < dataBaseSize; ++i){
         string lowerFIO = dataBase[i].FIO;
         lowerFIO = russianStringToLower(lowerFIO);
-        if(lowerFIO.find(buffer) != string::npos){
+        if(lowerFIO.find(buffer) != string::npos && !elementFound){
             elementFound = true;
-            cout << dataBase[i].FIO << ", группа " << dataBase[i].group << " , средний балл: " << dataBase[i].averageMark <<
-            " , доход на члена семьи " << dataBase[i].familyIncome.d << " руб, "; boolOutput(dataBase[i].lgoti);
+            cout << "\n№ | ФИО | Номер группы | Средний балл | Доход на члена семьи | Льготы\n";
+            cout << i+1 << ".  " << dataBase[i].FIO << ", " << dataBase[i].group << ", " << dataBase[i].averageMark <<
+                 ", " << dataBase[i].familyIncome.d << " руб, "; boolOutput(dataBase[i].lgoti); cout << "\n";
+        }else if(lowerFIO.find(buffer) != string::npos && elementFound){
+            cout << i+1 << ".  " << dataBase[i].FIO << ", " << dataBase[i].group << ", " << dataBase[i].averageMark <<
+                 ", " << dataBase[i].familyIncome.d << " руб, "; boolOutput(dataBase[i].lgoti); cout << "\n";
         }
     }
 

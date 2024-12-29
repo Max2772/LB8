@@ -1,7 +1,7 @@
 #include <iostream>
 #include "head.h"
 
-//
+/*                                If you want to run and debug in IDE uncomment this
 #include "input.cpp"
 #include "array_utils.cpp"
 #include "logic.cpp"
@@ -10,8 +10,8 @@
 #include "string_utils.cpp"
 #include "struct_input.cpp"
 #include "file_utils.cpp"
+*/
 
-//
 
 using namespace std;
 
